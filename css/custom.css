@@ -1,0 +1,105 @@
+
+.hs_rs_comment_img_cont_wrapper h2 a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.hs_header_logo_right{
+    margin-top: 11px;
+}
+.hs_footer_logo_wrapper img{
+    margin-top: -29px;
+}
+.hs_contact_indx_form_btn li button{
+    background: #59595c9c;
+}
+.hs_blog_box3_main_wrapper{
+    border-right: 5px solid rgba(255, 255, 255, 0.2);
+}
+.hs_indx_title_right_wrapper li:last-child{
+    color: #fff;
+}
+.slider-area .carousel-inner .item .carousel-captions::after{
+    background: rgba(0, 0, 0, 0.84);
+}
+.hs_navigation_header_wrapper{
+    /*margin-left: 364px;*/
+    margin-top: -82px;
+}
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+    z-index: 9999999;
+    position: relative;
+    margin-top: -22px;
+}
+.header-margin{
+    margin-left: 362px;
+}
+/*.hs_header_add_wrapper{
+    margin-left: 69px;
+}*/
+.reach{
+    margin-left: 110px;
+}
+.hs_btn_wrapper li .hs_btn_hover{
+    background: #fff;
+    color: #000;
+    width: 137px;
+    margin-right: 44px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.hs_effect_btn li .hs_btn_hover{
+    background: #fff;
+    color: #000;
+}
+.hs_effect_btn li .hs_btn_hover:hover{
+    background: #fff;
+    color: #000;
+}
+.hs_title_img_cont_wrapper h5 a{
+    color: #fff;
+}
+.slider-area .carousel-inner .item .carousel-captions .content{
+    padding-top: 230px;
+    padding-bottom: 230px;
+}
+.slider-area .carousel-inner .item .carousel-captions .content_tabs{
+    padding-top: 115px;
+}
+.hs_navigation_header_wrapper.menu_fixed{
+    margin-top: 0px;
+}
+.about-section{
+    margin-bottom: 90px;
+}
+.hs_kd_six_sec_input_wrapper input{
+    color: #fff;
+}
+.hs_kd_six_sec_input_wrapper textarea{
+    color: #fff;
+}
+.send-button{
+   margin-top: -46px; 
+}
+.hs_kd_service_heading_wrapper h4 span{
+    background: #fff;
+}
+.other-img{
+    z-index: 1;
+}
+.service-more h5 a{
+    color: #fff;
+}
+.blog-btn li a{
+    background: #fff;
+    color: #000;
+}
+.blog-btn li a:hover{
+    background: #fff;
+    color: #000;
+}
