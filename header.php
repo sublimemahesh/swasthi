@@ -32,7 +32,7 @@
                         </div>
                         <div class="hs_header_add_icon_cont">
                             <h5>Talk to Swasthi</h5>
-                            <p>+94 113663500</p>
+                            <p>+94 77 789 7990</p>
                         </div>
                     </div>
                     <div class="modal fade" id="myModal" role="dialog">

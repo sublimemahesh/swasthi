@@ -40,13 +40,13 @@ include './class/include.php';
             </div>
         </div>
         <!-- header Start -->
-      <?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
         <!-- header End -->
         <!-- Slider Start -->
-      <?php include 'slider.php'; ?>
+        <?php include 'slider.php'; ?>
         <!-- Slider End -->
         <div class="hs_title_main_wrapper">
-            
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -97,11 +97,11 @@ include './class/include.php';
                 </div>
             </div>
         </div>
-         <div class="hs_latest_news_main_wrapper">
+        <div class="hs_latest_news_main_wrapper">
             <!--<div class="hs_news_slider_bg_overlay"></div>-->
             <div class="container">
                 <div class="row">
-                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="hs_about_heading_main_wrapper">
                             <div class="hs_about_heading_wrapper">
                                 <h2>About <span>Swasthi</span></h2>
@@ -707,15 +707,15 @@ include './class/include.php';
                                 <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
                             </div>
                             <div class="hs_lest_news_cont_bottom">
-<!--                                <div class="hs_lest_news_cont_bottom_left">
-                                    <p><a href="#">by - Admin</a></p>
-                                </div>
-                                <div class="hs_lest_news_cont_bottom_center">
-                                    <p><a href="#">1244 Likes</a></p>
-                                </div>
-                                <div class="hs_lest_news_cont_bottom_right">
-                                    <p><a href="#">04 Comm.</a></p>
-                                </div>-->
+                                <!--                                <div class="hs_lest_news_cont_bottom_left">
+                                                                    <p><a href="#">by - Admin</a></p>
+                                                                </div>
+                                                                <div class="hs_lest_news_cont_bottom_center">
+                                                                    <p><a href="#">1244 Likes</a></p>
+                                                                </div>
+                                                                <div class="hs_lest_news_cont_bottom_right">
+                                                                    <p><a href="#">04 Comm.</a></p>
+                                                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -736,15 +736,15 @@ include './class/include.php';
                                 <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
                             </div>
                             <div class="hs_lest_news_cont_bottom">
-<!--                                <div class="hs_lest_news_cont_bottom_left">
-                                    <p><a href="#">by - Admin</a></p>
-                                </div>
-                                <div class="hs_lest_news_cont_bottom_center">
-                                    <p><a href="#">1244 Likes</a></p>
-                                </div>
-                                <div class="hs_lest_news_cont_bottom_right">
-                                    <p><a href="#">04 Comm.</a></p>
-                                </div>-->
+                                <!--                                <div class="hs_lest_news_cont_bottom_left">
+                                                                    <p><a href="#">by - Admin</a></p>
+                                                                </div>
+                                                                <div class="hs_lest_news_cont_bottom_center">
+                                                                    <p><a href="#">1244 Likes</a></p>
+                                                                </div>
+                                                                <div class="hs_lest_news_cont_bottom_right">
+                                                                    <p><a href="#">04 Comm.</a></p>
+                                                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -765,198 +765,118 @@ include './class/include.php';
                                 <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
                             </div>
                             <div class="hs_lest_news_cont_bottom">
-<!--                                <div class="hs_lest_news_cont_bottom_left">
-                                    <p><a href="#">by - Admin</a></p>
-                                </div>
-                                <div class="hs_lest_news_cont_bottom_center">
-                                    <p><a href="#">1244 Likes</a></p>
-                                </div>
-                                <div class="hs_lest_news_cont_bottom_right">
-                                    <p><a href="#">04 Comm.</a></p>
-                                </div>-->
+                                <!--                                <div class="hs_lest_news_cont_bottom_left">
+                                                                    <p><a href="#">by - Admin</a></p>
+                                                                </div>
+                                                                <div class="hs_lest_news_cont_bottom_center">
+                                                                    <p><a href="#">1244 Likes</a></p>
+                                                                </div>
+                                                                <div class="hs_lest_news_cont_bottom_right">
+                                                                    <p><a href="#">04 Comm.</a></p>
+                                                                </div>-->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-      <div class="hs_sign_main_wrapper">
-          <div class="hs_news_slider_bg_overlay"></div>
-        <div class="container">
-            
-            <div class="row">
-                
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    
-                    <div class="hs_about_heading_main_wrapper">
-                        <div class="hs_about_heading_wrapper">
-                            <h2>Customer <span> Feedback</span></h2>
-                            <h4><span></span></h4>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+        <div class="hs_sign_main_wrapper">
+            <div class="hs_news_slider_bg_overlay"></div>
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="hs_about_heading_main_wrapper">
+                            <div class="hs_about_heading_wrapper">
+                                <h2>Customer <span> Feedback</span></h2>
+                                <h4><span></span></h4>
+                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="hs_testi_slider_wrapper">
-                        <div class="owl-carousel owl-theme">
-                            <?php
-                            $comments = Comments::all();
-                            foreach ($comments as $comment){
-                                if($key/2=0){
-                                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="hs_testi_slider_wrapper">
+                            <div class="owl-carousel owl-theme">
+                                <?php
+                                $comments = Comments::all();
+                                if (count($comments) > 0) {
+                                    foreach (array_chunk($comments, 2) as $comment_group) {
+                                        ?>
+                                        <div class="item">
+                                            <div class="row">
+
+                                                <?php
+                                                foreach ($comment_group as $key => $comment) {
+                                                    if ($key % 2 == 0) {
+                                                        ?>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                            <div class="hs_testi_cont_main_wrapper">
+                                                                <div class="hs_testi_cont_inner_wrapper">
+                                                                    <div class="hs_testi_quote_wrapper">
+                                                                        <i class="fa fa-quote-left"></i>
+                                                                    </div>
+                                                                    <div class="hs_testi_quote_cont_wrapper">
+                                                                        <p><?php echo substr($comment["comment"], 0,200) . '...'; ?></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="hs_testi_client_main_wrapper">
+                                                                <div class="hs_testi_client_cont_sec">
+                                                                    <h2><?php echo $comment["name"]; ?></h2>
+                                                                    <p><?php echo $comment["title"]; ?></p>
+                                                                </div>
+                                                                <div class="hs_testi_client_cont_img_sec">
+                                                                    <img src="upload/comments/thumb/<?php echo $comment["image_name"]; ?>" alt="testi_img" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                                                            <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
+                                                                <div class="hs_testi_cont_inner_wrapper">
+                                                                    <div class="hs_testi_quote_wrapper">
+                                                                        <i class="fa fa-quote-left"></i>
+                                                                    </div>
+                                                                    <div class="hs_testi_quote_cont_wrapper">
+                                                                        <p><?php echo substr($comment["comment"], 0,200) . '...'; ?></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
+                                                                <div class="hs_testi_client_cont_img_sec">
+                                                                    <img src="upload/comments/thumb/<?php echo $comment["image_name"]; ?>" alt="testi_img" />
+                                                                </div>
+                                                                <div class="hs_testi_client_cont_sec">
+                                                                    <h2><?php echo $comment["name"]; ?></h2>
+                                                                    <p><?php echo $comment["title"]; ?></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+
+                                        <?php
+                                    }
+                                } else {
+                                    echo "No comments in the database.";
                                 }
-                                }
-                            ?>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="hs_testi_cont_main_wrapper">
-                                            <div class="hs_testi_cont_inner_wrapper">
-                                                <div class="hs_testi_quote_wrapper">
-                                                    <i class="fa fa-quote-left"></i>
-                                                </div>
-                                                <div class="hs_testi_quote_cont_wrapper">
-                                                    <p><?php echo $comment["comment"]; ?></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hs_testi_client_main_wrapper">
-                                            <div class="hs_testi_client_cont_sec">
-                                                <h2><?php echo $comment["name"]; ?></h2>
-                                                <p><?php echo $comment["title"]; ?></p>
-                                            </div>
-                                            <div class="hs_testi_client_cont_img_sec">
-                                                <img src="upload/comments/thumb/<?php echo $comment["image_name"]; ?>" alt="testi_img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    ?>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
-                                        <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
-                                            <div class="hs_testi_cont_inner_wrapper">
-                                                <div class="hs_testi_quote_wrapper">
-                                                    <i class="fa fa-quote-left"></i>
-                                                </div>
-                                                <div class="hs_testi_quote_cont_wrapper">
-                                                    <p><?php echo $comment["comment"]; ?></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
-                                            <div class="hs_testi_client_cont_img_sec">
-                                                <img src="upload/comments/thumb/<?php echo $comment["image_name"]; ?>" alt="testi_img" />
-                                            </div>
-                                            <div class="hs_testi_client_cont_sec">
-                                                <h2><?php echo $comment["name"]; ?></h2>
-                                                <p><?php echo $comment["title"]; ?></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                ?>
                             </div>
-<!--                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
-                                        <div class="hs_testi_cont_main_wrapper">
-                                            <div class="hs_testi_cont_inner_wrapper">
-                                                <div class="hs_testi_quote_wrapper">
-                                                    <i class="fa fa-quote-left"></i>
-                                                </div>
-                                                <div class="hs_testi_quote_cont_wrapper">
-                                                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hs_testi_client_main_wrapper">
-                                            <div class="hs_testi_client_cont_sec">
-                                                <h2>Joan doe</h2>
-                                                <p>Designer</p>
-                                            </div>
-                                            <div class="hs_testi_client_cont_img_sec">
-                                                <img src="images/content/testi_client_img1.jpg" alt="testi_img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
-                                            <div class="hs_testi_cont_inner_wrapper">
-                                                <div class="hs_testi_quote_wrapper">
-                                                    <i class="fa fa-quote-left"></i>
-                                                </div>
-                                                <div class="hs_testi_quote_cont_wrapper">
-                                                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
-                                            <div class="hs_testi_client_cont_img_sec">
-                                                <img src="images/content/testi_client_img2.jpg" alt="testi_img" />
-                                            </div>
-                                            <div class="hs_testi_client_cont_sec">
-                                                <h2>Joan doe</h2>
-                                                <p>Designer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  hidden-xs">
-                                        <div class="hs_testi_cont_main_wrapper">
-                                            <div class="hs_testi_cont_inner_wrapper">
-                                                <div class="hs_testi_quote_wrapper">
-                                                    <i class="fa fa-quote-left"></i>
-                                                </div>
-                                                <div class="hs_testi_quote_cont_wrapper">
-                                                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hs_testi_client_main_wrapper">
-                                            <div class="hs_testi_client_cont_sec">
-                                                <h2>Joan doe</h2>
-                                                <p>Designer</p>
-                                            </div>
-                                            <div class="hs_testi_client_cont_img_sec">
-                                                <img src="images/content/testi_client_img1.jpg" alt="testi_img" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
-                                            <div class="hs_testi_cont_inner_wrapper">
-                                                <div class="hs_testi_quote_wrapper">
-                                                    <i class="fa fa-quote-left"></i>
-                                                </div>
-                                                <div class="hs_testi_quote_cont_wrapper">
-                                                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
-                                            <div class="hs_testi_client_cont_img_sec">
-                                                <img src="images/content/testi_client_img2.jpg" alt="testi_img" />
-                                            </div>
-                                            <div class="hs_testi_client_cont_sec">
-                                                <h2>Joan doe</h2>
-                                                <p>Designer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
-<?php
-                            }
-                            ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
         <!-- footer Start -->
-     <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         <!-- footer End -->
         <!--main js file start-->
         <script src="js/jquery_min.js"></script>
