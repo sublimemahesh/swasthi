@@ -49,51 +49,32 @@ include './class/include.php';
 
             <div class="container">
                 <div class="row">
+                    <?php
+                    $services = Service::all();
+                    if (count($services) > 0) {
+                        foreach ($services as $key => $service) {
+                            ?>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="hs_title_box_main_wrapper">
                             <div class="hs_title_img_wrapper">
-                                <img src="images/content/title_img1.jpg" alt="totle_img">
+                                <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
                                 <ul>
-                                    <li>$14</li>
+                                    <li>Rs.<?php echo $service["price"]; ?></li>
                                 </ul>
                             </div>
                             <div class="hs_title_img_cont_wrapper">
-                                <h2><a href="#">Tarot Reading</a></h2>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
-                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
+                                <p><?php echo substr($service["description"], 0, 50) . '...'; ?></p>
+                                <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="hs_title_box_main_wrapper">
-                            <div class="hs_title_img_wrapper">
-                                <img src="images/content/title_img2.jpg" alt="totle_img">
-                                <ul>
-                                    <li>$12</li>
-                                </ul>
-                            </div>
-                            <div class="hs_title_img_cont_wrapper">
-                                <h2><a href="#">Crystal ball reading</a></h2>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
-                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="hs_title_box_main_wrapper">
-                            <div class="hs_title_img_wrapper">
-                                <img src="images/content/title_img3.jpg" alt="totle_img">
-                                <ul>
-                                    <li>$22</li>
-                                </ul>
-                            </div>
-                            <div class="hs_title_img_cont_wrapper">
-                                <h2><a href="#">Palm Reading</a></h2>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
-                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    } else {
+                        echo "<h6>There are no any services in the database.</h6>";
+                    }
+                    ?>
                 </div>
             </div>
         </div>
