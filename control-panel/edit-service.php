@@ -66,6 +66,14 @@ $SERVICE = new Service($id);
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" id="price" class="form-control" value="<?php echo $SERVICE->price; ?>"  name="price">
+                                                <label class="form-label">Price</label>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                     <div class="col-sm-12">

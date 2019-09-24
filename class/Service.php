@@ -16,6 +16,7 @@ class Service {
     public $id;
     public $title;
     public $image_name;
+    public $price;
     public $short_description;
     public $description;
     public $queue;
@@ -23,7 +24,7 @@ class Service {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`title`,`image_name`,`short_description`,`description`,`queue` FROM `service` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`title`,`image_name`,`price`,`short_description`,`description`,`queue` FROM `service` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -32,6 +33,7 @@ class Service {
             $this->id = $result['id'];
             $this->title = $result['title'];
             $this->image_name = $result['image_name'];
+            $this->price = $result['price'];
             $this->short_description = $result['short_description'];
             $this->description = $result['description'];
             $this->queue = $result['queue'];
@@ -42,9 +44,10 @@ class Service {
 
     public function create() {
 
-        $query = "INSERT INTO `service` (`title`,`image_name`,`short_description`,`description`,`queue`) VALUES  ('"
+        $query = "INSERT INTO `service` (`title`,`image_name`,`price`,`short_description`,`description`,`queue`) VALUES  ('"
                 . $this->title . "','"
                 . $this->image_name . "', '"
+                . $this->price . "', '"
                 . $this->short_description . "', '"
                 . $this->description . "', '"
                 . $this->queue . "')";
@@ -81,6 +84,7 @@ class Service {
         $query = "UPDATE  `service` SET "
                 . "`title` ='" . $this->title . "', "
                 . "`image_name` ='" . $this->image_name . "', "
+                . "`price` ='" . $this->price . "', "
                 . "`short_description` ='" . $this->short_description . "', "
                 . "`description` ='" . $this->description . "', "
                 . "`queue` ='" . $this->queue . "' "
@@ -132,6 +136,19 @@ class Service {
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
+    }
+     public function getOtherServicesWithoutThisID($id) {
+
+        $query = "SELECT * FROM `service` WHERE `id` != " . $id . " ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
     }
 
 }

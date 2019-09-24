@@ -1,3 +1,6 @@
+<?php
+include './class/include.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -35,7 +38,7 @@
             </div>
         </div>
         <!-- header Start -->
-      <?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
         <!-- header End -->
         <div class="hs_indx_title_main_wrapper">
             <div class="hs_title_img_overlay"></div>
@@ -57,169 +60,42 @@
                 </div>
             </div>
         </div>
-        <!-- hs service wrapper Start -->
         <div class="hs_service_main_wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="hs_about_heading_main_wrapper">
-                            <div class="hs_about_heading_wrapper">
-                                <h2>Our <span> services</span></h2>
-                                <h4><span></span></h4>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-area ptb-100">
-                        <div class="container">
-                            <div class="portfolio-filter clearfix text-center">
-                                <ul id="filter">
-                                    <li><a class="active" data-group="all">All</a></li>
-                                    <li><a data-group="business">Paid Services</a></li>
-                                    <li><a data-group="website"> Free Services</a></li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <div id="gridWrapper" class="clearfix">
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
-                                        <a href="view-services.php">
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-success"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>Career</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
-                                        </a>
+                    <?php
+                    $services = Service::all();
+                    if (count($services) > 0) {
+                        foreach ($services as $key => $service) {
+                            ?>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="hs_title_box_main_wrapper service-box">
+                                    <div class="hs_title_img_wrapper">
+                                        <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
+                                        <ul>
+                                            <li>Rs.<?php echo $service["price"]; ?></li>
+                                        </ul>
                                     </div>
-
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "website"]'>
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-marry-me"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>marriage</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='["all", "business"]'>
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-islamic-temple"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>Worship lesson</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='["all", "website", "business"]'>
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-pregnancy"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>Pregnancy</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='["all", "business"]'>
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-engagement-ring"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>Manglik Dosha</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='["all","website"]'>
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-animal"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>Kundli Dosha</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='["all", "business"]'>
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-giftboxes"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>Festivals</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='["all","website"]'>
-                                        <div class="hs_service_main_box_wrapper">
-                                            <div class="hs_service_icon_main_wrapper">
-                                                <div class="hs_service_icon_wrapper">
-                                                    <i class="flaticon-baby-with-diaper"></i>
-                                                    <div class="btc_step_overlay"></div>
-                                                </div>
-                                            </div>
-                                            <div class="hs_service_icon_cont_wrapper service-more">
-                                                <h2>Name Analysis</h2>
-                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
-                                                <h5><a href="view-services.php">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                                            </div>
-                                        </div>
+                                    <div class="hs_title_img_cont_wrapper">
+                                        <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
+                                        <p><?php echo substr($service["description"], 0, 50) . '...'; ?></p>
+                                        <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            <?php
+                        }
+                    } else {
+                        echo "<h6>There are no any services in the database.</h6>";
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>
-        
+
         <!-- footer Start -->
-     <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         <!-- footer End -->
         <!--main js file start-->
         <script src="js/jquery_min.js"></script>
@@ -231,7 +107,7 @@
         <script src="js/jquery.shuffle.min.js"></script>
         <script src="js/jquery.countTo.js"></script>
         <script src="js/jquery.inview.min.js"></script>
-        <script src="js/jquery.magnific-popup.js"></script>
+        <!--<script src="js/jquery.magnific-popup.js"></script>-->
         <script src="js/custom.js"></script>
         <!--main js file end-->
     </body>

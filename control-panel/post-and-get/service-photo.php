@@ -8,7 +8,7 @@ if (isset($_POST['create'])) {
     $VALID = new Validator();
 
     $SERVICE_PHOTO->service = $_POST['id'];
-    $SERVICE_PHOTO->caption = mysql_real_escape_string($_POST['caption']);
+    $SERVICE_PHOTO->caption = ($_POST['caption']);
 
     $dir_dest = '../../upload/service/gallery/';
     $dir_dest_thumb = '../../upload/service/gallery/thumb/';
@@ -25,8 +25,8 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_ext = 'jpg';
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $img;
-        $handle->image_x = 900;
-        $handle->image_y = 500;
+        $handle->image_x = 840;
+        $handle->image_y = 350;
 
         $handle->Process($dir_dest);
 
@@ -98,8 +98,8 @@ if (isset($_POST['update'])) {
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $img;
-        $handle->image_x = 900;
-        $handle->image_y = 500;
+        $handle->image_x = 840;
+        $handle->image_y = 350;
 
         $handle->Process($dir_dest);
 
@@ -129,7 +129,7 @@ if (isset($_POST['update'])) {
     $SERVICE_PHOTO = new ServicePhoto($_POST['id']);
 
     $SERVICE_PHOTO->image_name = $_POST['oldImageName'];
-    $SERVICE_PHOTO->caption = mysql_real_escape_string($_POST['caption']);
+    $SERVICE_PHOTO->caption = ($_POST['caption']);
 
     $VALID = new Validator();
     $VALID->check($SERVICE_PHOTO, [
