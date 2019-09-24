@@ -6950,5 +6950,18 @@ width:100%;
 	color:#000;
 	padding-right:10px;
 }
+.hs_footer_contact_wrapper p {
+    margin-top: 5px;
+}
+.hs_footer_contact_wrapper p.phone-number {
+    margin-top: 30px;
+}
+.customer-feedback .hs_testi_client_main_wrapper {
+    margin-top: 20px;
+}
+
+.customer-feedback .hs_testi_cont_main_wrapper::after {
+    display: none;
+}
 /*-- btc shop single tabs Wrapper End --*/
 /**************------ SHOP SINGLE CSS END -------*******************/

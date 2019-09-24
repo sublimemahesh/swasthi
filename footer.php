@@ -28,8 +28,9 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="hs_footer_contact_wrapper">
                             <h2>Contact <span>Us Today</span></h2>
-                            <p>Call Us <span>666 777 888</span> OR <span>111 222 333</span> Send an Email on <a href="#">contact@example.com</a> Visit Us No 55,Isipathanarama Rd, Navinna, 
-                                <br>Maharagama</p>
+                            <p class="phone-number">Call Us <span>+94 77 789 7990</span></p>
+                                <p>Send an Email on info@swasthi.lk</p>
+                                <p>Visit Us No 55,Isipathanarama Rd, Navinna,Maharagama</p>
                             <div class="hs_footer_contact_input_wrapper">
                                 <input type="text" placeholder="Email Address..."><i class="fa fa-envelope"></i>
                             </div>
