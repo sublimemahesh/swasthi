@@ -5,8 +5,8 @@
 $comany_name = "Swasthi";
 $website_name = "www.swasthi.com";
 $comConNumber = "+94 113663500";
-$comEmail = "info@swasthi.com";
-$from = 'info@swasthi.com';
+$comEmail = "igmpiyumini0615@gmail.com";
+$from = 'igmpiyumini0615@gmail.com';
 
 
 //----------------------CAPTCHACODE---------------------
