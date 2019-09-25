@@ -2,14 +2,11 @@
             <div class="container">
                 <div class="hs_header_logo_left hidden-xs">
                     <div class="hs_logo_wrapper">
-                        <a href="./"><img src="images/content/top_logo.jpg" class="img-responsive" alt="logo" title="Logo"/></a>
+                        <a href="./"><img src="images/content/top_logo.jpg" class="img-responsive logo-1" alt="logo" title="Logo"/></a>
                     </div>
                 </div>
                 <div class="hs_header_logo_right">
-<!--                    <div class="hs_top_user_profile" data-toggle="modal" data-target="#myModal">
-                        <img src="images/header/top_user.jpg" alt="user">
-                        <p><i class="fa fa-plus"></i></p>
-                    </div>-->
+                    </div>
                     <div class="hs_btn_wrapper">
                         <ul>
                             <li><a href="#" class="hs_btn_hover">Appointments</a></li>
@@ -20,8 +17,6 @@
                             <i class="fa fa-home"></i>
                         </div>
                         <div class="hs_header_add_icon_cont">
-<!--                            <h5>Reach Us</h5>
-                            <p>601 , Ram Nagar Dewas</p>-->
                             <h5>Reach Us</h5>
                             <p>No 55,Isipathanarama Rd, Navinna</p>
                         </div>
@@ -57,9 +52,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- hs top header End -->
-        <!-- hs Navigation Start -->
+        <!--</div>-->
         <div class="hs_navigation_header_wrapper">
             <div class="container">
                 <div class="row">
@@ -69,10 +62,6 @@
                                 <li>
                                     <div class="dropdown-wrapper menu-button">
                                         <a class="menu-button" href="./">Home</a>
-<!--                                        <div class="drop-menu">
-                                            <a class="menu-button" href="index.html">Home</a>
-                                            <a class="menu-button" href="index2.html">Home2</a>
-                                        </div>-->
                                     </div>
                                 </li>
                                 <li>
@@ -81,36 +70,16 @@
                                 <li>
                                     <div class="dropdown-wrapper menu-button">
                                         <a class="menu-button" href="services.php">Services</a>
-<!--                                        <div class="drop-menu hs_mega_menu">
-                                            <a class="menu-button" href="aries.html">Aries</a>
-                                            <a class="menu-button" href="chinese.html">Chinese</a>
-                                            <a class="menu-button" href="chinese_single.html">Chinese-Single</a>
-                                            <a class="menu-button" href="crystal.html">Crystal</a>
-                                            <a class="menu-button" href="kundli_dosh.html">Kundli-Dosh</a>
-                                            <a class="menu-button" href="numerology.html">Numerology</a>
-                                            <a class="menu-button" href="palm.html">Palm</a>
-                                            <a class="menu-button" href="tarot.html">Tarot</a>
-                                            <a class="menu-button" href="tarot_single.html">Tarot-Single</a>
-                                            <a class="menu-button" href="vastu_shastra.html">Vastu-Shastra</a>
-                                        </div>-->
                                     </div>
                                 </li>
                                 <li>
                                     <div class="dropdown-wrapper menu-button">
                                         <a class="menu-button" href="daily-horoscope.php">Daily Horoscope</a>
-<!--                                        <div class="drop-menu">
-                                            <a class="menu-button" href="shop.html">Shop</a>
-                                            <a class="menu-button" href="shop_single.html">Shop-Single</a>
-                                        </div>-->
                                     </div>
                                 </li>
                                 <li>
                                     <div class="dropdown-wrapper menu-button">
                                         <a class="menu-button" href="blog.php">Blog </a>
-<!--                                        <div class="drop-menu">
-                                            <a class="menu-button" href="blog_categories.html">Blog-Categories</a>
-                                            <a class="menu-button" href="blog_single.html">Blog-Single</a>
-                                        </div>-->
                                     </div>
                                 </li>
                                 <li>
@@ -126,7 +95,7 @@
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-6">
                                         <div class="hs_logo">
-                                            <a href="index.html"><img src="images/content/mobile_logo.png" alt="Logo" title="Logo"></a>
+                                            <a href="./"><img src="images/header/responsive-logo.png" alt="Logo" title="Logo"></a>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-6">
@@ -187,206 +156,38 @@
                                                 </svg>
                                             </a>
                                             <nav class="cd-dropdown">
-                                                <h2><a href="index.html">Horoscope</a></h2>
+                                                <h2><a href="./">Swasthi</a></h2>
                                                 <a href="#0" class="cd-close">Close</a>
                                                 <ul class="cd-dropdown-content">
                                                     <li>
-                                                        <form class="cd-search">
-                                                            <input type="search" placeholder="Search...">
-                                                        </form>
+                                                        <a href="./">Home</a>
                                                     </li>
-                                                    <li class="has-children">
-                                                        <a href="#">Home</a>
-
-                                                        <ul class="cd-secondary-dropdown is-hidden">
-                                                            <li class="go-back"><a href="#0">Menu</a></li>
-                                                            <li>
-                                                                <a href="index.html">Home</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                            <li>
-                                                                <a href="index2.html">Home2</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-
-                                                        </ul>
-                                                        <!-- .cd-secondary-dropdown -->
-                                                    </li>
-                                                    <!-- .has-children -->
                                                     <li>
-                                                        <a href="index.html">About US</a>
+                                                        <a href="about.php">About US</a>
                                                     </li>
-                                                    <!-- .has-children -->
-
-                                                    <li class="has-children">
-                                                        <a href="#">Pages</a>
-
-                                                        <ul class="cd-secondary-dropdown is-hidden">
-                                                            <li class="go-back"><a href="#0">Menu</a></li>
-                                                            <li>
-                                                                <a href="aries.html">Aries</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                            <li>
-                                                                <a href="chinese.html">Chinese</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                            <li>
-                                                                <a href="chinese_single.html">Chinese-Single</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                            <li>
-                                                                <a href="crystal.html">Crystal</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                            <li>
-                                                                <a href="kundli_dosh.html">Kundli-Dosh</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-                                                            <li>
-                                                                <a href="numerology.html">Numerology</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-                                                            <li>
-                                                                <a href="palm.html">Palm</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-                                                            <li>
-                                                                <a href="tarot.html">Tarot</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-                                                            <li>
-                                                                <a href="tarot_single.html">Tarot-Single</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-                                                            <li>
-                                                                <a href="vastu_shastra.html">Vastu-Shastra</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                        </ul>
-                                                        <!-- .cd-secondary-dropdown -->
-                                                    </li>
-                                                    <!-- .has-children -->
-                                                    <li class="has-children">
-                                                        <a href="#">Shop</a>
-
-                                                        <ul class="cd-secondary-dropdown is-hidden">
-                                                            <li class="go-back"><a href="#0">Menu</a></li>
-                                                            <li>
-                                                                <a href="shop.html">Shop</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                            <li>
-                                                                <a href="shop_single.html">Shop-Single</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-
-                                                        </ul>
-                                                        <!-- .cd-secondary-dropdown -->
-                                                    </li>
-                                                    <!-- .has-children -->
-                                                    <li class="has-children">
-                                                        <a href="#">Blog</a>
-
-                                                        <ul class="cd-secondary-dropdown is-hidden">
-                                                            <li class="go-back"><a href="#0">Menu</a></li>
-                                                            <li>
-                                                                <a href="blog_categories.html">Blog-Categories</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-                                                            <li>
-                                                                <a href="blog_single.html">Blog-Single</a>
-                                                            </li>
-                                                            <!-- .has-children -->
-
-
-                                                        </ul>
-                                                        <!-- .cd-secondary-dropdown -->
-                                                    </li>
-                                                    <!-- .has-children -->
                                                     <li>
-                                                        <a href="contact.html">Contact</a>
+                                                        <a href="services.php">Services</a>
                                                     </li>
-
+                                                    <li>
+                                                        <a href="daily-horoscope.php">Daily Horoscope</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog.php">Blog</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="customer-feedback.php">Feedback</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact.php">Contact Us</a>
+                                                    </li>
                                                 </ul>
-                                                <!-- .cd-dropdown-content -->
-
-
-
                                             </nav>
-                                            <!-- .cd-dropdown -->
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- .cd-dropdown-wrapper -->
                         </header>
                     </div>
-<!--                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-xs">
-                        <div class="hs_navi_searchbar_wrapper">
-                            <input type="text" placeholder="Search here">
-                            <button><i class="fa fa-search"></i></button>
-                        </div>
-                        <div class="hs_navi_cart_wrapper">
-                            <div class="dropdown-wrapper menu-button">
-                                <a class="menu-button" href="#"><i class="flaticon-shop"></i><span>3</span></a>
-                                <div class="drop-menu">
-
-                                    <div class="cc_cart_wrapper1 menu-button">
-                                        <div class="cc_cart_img_wrapper">
-                                            <img src="images/content/cart_img.jpg" alt="cart_img" />
-                                        </div>
-                                        <div class="cc_cart_cont_wrapper">
-                                            <h4><a href="#">Gemstone</a></h4>
-                                            <p>Quantity : 2 × $45</p>
-                                            <h5>$90</h5>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                    </div>
-                                    <div class="cc_cart_wrapper1 menu-button">
-                                        <div class="cc_cart_img_wrapper">
-                                            <img src="images/content/cart_img.jpg" alt="cart_img" />
-                                        </div>
-                                        <div class="cc_cart_cont_wrapper">
-                                            <h4><a href="#">Gemstone</a></h4>
-                                            <p>Quantity : 2 × $45</p>
-                                            <h5>$90</h5>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                    </div>
-                                    <div class="cc_cart_wrapper1 menu-button">
-                                        <div class="cc_cart_img_wrapper">
-                                            <img src="images/content/cart_img.jpg" alt="cart_img" />
-                                        </div>
-                                        <div class="cc_cart_cont_wrapper">
-                                            <h4><a href="#">Gemstone</a></h4>
-                                            <p>Quantity : 2 × $45</p>
-                                            <h5>$90</h5>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                    </div>
-                                    <div class="cc_cart_wrapper1 menu-button">
-                                        <div class="hs_effect_btn ceckout_btn">
-                                            <ul>
-                                                <li><a href="#" class="hs_btn_hover">checkout</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
                 </div>
             </div>
         </div>
