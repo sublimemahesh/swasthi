@@ -343,21 +343,15 @@
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="create-service.php">
+                            <a href="create-daily-horoscope.php">
                                 <i class="material-icons">add</i>
                                 <span>Add New</span>
                             </a>
                         </li>
                         <li>
-                            <a href="manage-service.php">
+                            <a href="manage-daily-horoscopes.php">
                                 <i class="material-icons">list</i>
                                 <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-services.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
                             </a>
                         </li>
                     </ul>
