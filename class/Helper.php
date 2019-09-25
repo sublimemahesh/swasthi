@@ -27,5 +27,10 @@ class Helper {
         $path = str_replace('class', '', dirname(__FILE__));
         return $path;
     }
+    
+    public function getDateDifference($date1, $date2) {
+        $diff = abs(strtotime($date2) - strtotime($date1))/86400;
+        return $diff;
+    }
 
 }

@@ -1,11 +1,10 @@
 $(document).ready(function () {
-    $('.delete-offer').click(function () {
-
+    $('.dataTable').on('click','.delete-daily-horoscope', function () {
         var id = $(this).attr("data-id");
 
         swal({
             title: "Are you sure?",
-            text: "You will not be able to recover this imaginary file!",
+            text: "You will not be able to recover this details!",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -14,7 +13,7 @@ $(document).ready(function () {
         }, function () {
 
             $.ajax({
-                url: "delete/ajax/offer.php",
+                url: "delete/ajax/daily-horoscope.php",
                 type: "POST",
                 data: {id: id, option: 'delete'},
                 dataType: "JSON",
@@ -23,13 +22,13 @@ $(document).ready(function () {
 
                         swal({
                             title: "Deleted!",
-                            text: "Your imaginary file has been deleted.",
+                            text: "Your details has been deleted.",
                             type: 'success',
                             timer: 2000,
                             showConfirmButton: false
                         });
 
-                        $('#div' + id).remove();
+                        $('#row_' + id).remove();
 
                     }
                 }
