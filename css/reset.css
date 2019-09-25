@@ -132,7 +132,7 @@ header {
   left: 0;
   width: 300PX;
   height: 100%;
-  background-color: #170135;
+  background-color: #000;
   color: #000000;
   visibility: hidden;
   /* Force Hardware Acceleration */
