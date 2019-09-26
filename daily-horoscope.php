@@ -62,19 +62,20 @@ include './class/include.php';
         </div>
         <!-- hs service wrapper Start -->
         <div class="hs_sign_main_wrapper">
-            <div class="hs_news_slider_bg_overlay"></div>
-            <div class="container">
+            <!--<div class="hs_news_slider_bg_overlay"></div>-->
+            <div class="container horoscope-section">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hs_shop_tabs_cont_sec_wrapper">
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="hs_kd_first_sec_wrapper">
-                                            <h2>Daily Horoscope</h2>
+                                <!--<div class="row">-->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="hs_kd_first_sec_wrapper">
+                                        <h2><?php echo date('Y'); ?> <?php echo date('F'); ?> <?php echo date('d'); ?> , <?php echo date('l'); ?> - අද දවස ඔබට කොහොමද?<h2></h2>
                                             <h4><span></span></h4>
-                                        </div>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <?php
                                     $signs = DefaultData::getSigns();
                                     $daily_details = DailyHoroscope::getHoroscopeDetailsByDate();
@@ -82,14 +83,17 @@ include './class/include.php';
                                         foreach ($signs as $key => $sign) {
                                             if ($key == $details['sign']) {
                                                 ?>
-                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                    <div class="hs_shop_prodt_main_box">
-                                                        <div class="hs_shop_prodt_img_wrapper">
-                                                            <img src="images/content/shop/sp1.jpg" alt="shop_product">
-                                                        </div>
-                                                        <div class="hs_shop_prodt_img_cont_wrapper">
-                                                            <h2><a href="#"><?php echo $sign; ?></a></h2>
-                                                            <?php echo $details['description']; ?>
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                    <div class="hs_kd_service_main_box_wrapper">
+                                                        <div class="hs_kd_service_inner_box_wrapper horoscope-box">
+                                                            <div class="hs_kd_ser_img_wrapper horoscope-box">
+                                                                <img src="images/content/kundali/ser1.jpg" alt="service_img" />
+                                                            </div>
+                                                            <div class="hs_kd_ser_img_cont_wrapper">
+                                                                <h2><?php echo $sign; ?></h2>
+                                                                <p><?php echo $details['description']; ?></p>
+                                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

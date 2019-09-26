@@ -113,3 +113,10 @@
 .hs_footer_ln_cont_wrapper h4{
     line-height: 20px;
 }
+.horoscope-box{
+    box-shadow: 0px 0px 9px 3px rgba(254, 254, 255, 0.44);
+    border: 1px solid rgb(9, 8, 8);
+}
+.horoscope-section{
+    margin-top: -46px;
+}
