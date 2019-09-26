@@ -7,14 +7,14 @@
  */
 
 /**
- * Description of Service_photo
+ * Description of Blog_photo
  *
- * @author Suharshana DsW
+ * @author W j K n ``
  */
-class ServicePhoto {
+class BlogPhoto {
 
     public $id;
-    public $service;
+    public $blog;
     public $image_name;
     public $caption;
     public $queue;
@@ -22,14 +22,14 @@ class ServicePhoto {
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`service`,`image_name`,`caption`,`queue` FROM `service_photo` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`blog`,`image_name`,`caption`,`queue` FROM `blog_photo` WHERE `id`=" . $id;
 
             $db = new Database();
 
             $result = mysql_fetch_array($db->readQuery($query));
 
             $this->id = $result['id'];
-            $this->service = $result['service'];
+            $this->blog = $result['blog'];
             $this->image_name = $result['image_name'];
             $this->caption = $result['caption'];
             $this->queue = $result['queue'];
@@ -40,8 +40,8 @@ class ServicePhoto {
 
     public function create() {
 
-        $query = "INSERT INTO `service_photo` (`service`,`image_name`,`caption`,`queue`) VALUES  ('"
-                . $this->service . "','"
+        $query = "INSERT INTO `blog_photo` (`blog`,`image_name`,`caption`,`queue`) VALUES  ('"
+                . $this->blog . "','"
                 . $this->image_name . "', '"
                 . $this->caption . "', '"
                 . $this->queue . "')";
@@ -61,7 +61,7 @@ class ServicePhoto {
 
     public function all() {
 
-        $query = "SELECT * FROM `service_photo` ORDER BY queue ASC";
+        $query = "SELECT * FROM `blog_photo` ORDER BY queue ASC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -75,8 +75,8 @@ class ServicePhoto {
 
     public function update() {
 
-        $query = "UPDATE  `service_photo` SET "
-                . "`service` ='" . $this->service . "', "
+        $query = "UPDATE  `blog_photo` SET "
+                . "`blog` ='" . $this->blog . "', "
                 . "`image_name` ='" . $this->image_name . "', "
                 . "`caption` ='" . $this->caption . "', "
                 . "`queue` ='" . $this->queue . "' "
@@ -94,17 +94,19 @@ class ServicePhoto {
     }
 
     public function delete() {
+        unlink(Helper::getSitePath() . "upload/blog/gallery/" . $this->imageName);
+        unlink(Helper::getSitePath() . "upload/blog/gallery/thumb/" . $this->imageName);
 
-        $query = 'DELETE FROM `service_photo` WHERE id="' . $this->id . '"';
+        $query = 'DELETE FROM `blog_photo` WHERE `id` ="' . $this->id . '"';
 
         $db = new Database();
 
         return $db->readQuery($query);
     }
 
-    public function getServicePhotosById($service) {
+    public function getBlogPhotosById($blog) {
 
-        $query = "SELECT * FROM `service_photo` WHERE `service`= $service ORDER BY queue ASC";
+        $query = "SELECT * FROM `blog_photo` WHERE `blog`= $blog ORDER BY queue ASC";
 
         $db = new Database();
 
@@ -118,9 +120,10 @@ class ServicePhoto {
     }
 
     public function arrange($key, $img) {
-        $query = "UPDATE `service_photo` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";
+        $query = "UPDATE `blog_photo` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
+
 }

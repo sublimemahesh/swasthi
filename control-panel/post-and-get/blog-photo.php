@@ -4,14 +4,14 @@ include_once(dirname(__FILE__) . '/../../class/include.php');
 
 if (isset($_POST['create'])) {
 
-    $SERVICE_PHOTO = new ServicePhoto(NULL);
+    $BLOG_PHOTO = new BlogPhoto(NULL);
     $VALID = new Validator();
 
-    $SERVICE_PHOTO->service = $_POST['id'];
-    $SERVICE_PHOTO->caption = ($_POST['caption']);
+    $BLOG_PHOTO->blog = $_POST['id'];
+    $BLOG_PHOTO->caption = ($_POST['caption']);
 
-    $dir_dest = '../../upload/service/gallery/';
-    $dir_dest_thumb = '../../upload/service/gallery/thumb/';
+    $dir_dest = '../../upload/blog/gallery/';
+    $dir_dest_thumb = '../../upload/blog/gallery/thumb/';
 
     $handle = new Upload($_FILES['image']);
 
@@ -53,15 +53,15 @@ if (isset($_POST['create'])) {
         }
     }
 
-    $SERVICE_PHOTO->image_name = $imgName;
+    $BLOG_PHOTO->image_name = $imgName;
 
-    $VALID->check($SERVICE_PHOTO, [
+    $VALID->check($BLOG_PHOTO, [
         'caption' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
-        $SERVICE_PHOTO->create();
+        $BLOG_PHOTO->create();
 
         if (!isset($_SESSION)) {
             session_start();
@@ -84,12 +84,12 @@ if (isset($_POST['create'])) {
 
 if (isset($_POST['update'])) {
 
-    $dir_dest = '../../upload/service/gallery/';
-    $dir_dest_thumb = '../../upload/service/gallery/thumb/';
+    $dir_dest = '../../upload/blog/gallery/';
+    $dir_dest_thumb = '../../upload/blog/gallery/thumb/';
 
     $handle = new Upload($_FILES['image']);
 
-    $img = $_POST ["oldImageName"];
+    $img = $_POST["oldImageName"];
 
     if ($handle->uploaded) {
         $handle->image_resize = true;
@@ -126,19 +126,19 @@ if (isset($_POST['update'])) {
         }
     }
 
-    $SERVICE_PHOTO = new ServicePhoto($_POST['id']);
+    $BLOG_PHOTO = new BlogPhoto($_POST['id']);
 
-    $SERVICE_PHOTO->image_name = $_POST['oldImageName'];
-    $SERVICE_PHOTO->caption = ($_POST['caption']);
+    $BLOG_PHOTO->image_name = $_POST['oldImageName'];
+    $BLOG_PHOTO->caption = ($_POST['caption']);
 
     $VALID = new Validator();
-    $VALID->check($SERVICE_PHOTO, [
+    $VALID->check($BLOG_PHOTO, [
         'caption' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
-        $SERVICE_PHOTO->update();
+        $BLOG_PHOTO->update();
 
         if (!isset($_SESSION)) {
             session_start();
@@ -164,7 +164,7 @@ if (isset($_POST['save-data'])) {
     foreach ($_POST['sort'] as $key => $img) {
         $key = $key + 1;
 
-        $SERVICE_PHOTO = ServicePhoto::arrange($key, $img);
+        $BLOG_PHOTO = BlogPhoto::arrange($key, $img);
 
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }

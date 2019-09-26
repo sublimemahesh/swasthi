@@ -1,3 +1,11 @@
+<?php
+include './class/include.php';
+
+$id = "";
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -35,93 +43,77 @@
             </div>
         </div>
         <!-- header Start -->
-      <?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
         <!-- header End -->
-         <div class="hs_indx_title_main_wrapper">
-        <div class="hs_title_img_overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
-                    <div class="hs_indx_title_left_wrapper">
-                        <h2>Blog</h2>
+        <div class="hs_indx_title_main_wrapper">
+            <div class="hs_title_img_overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                        <div class="hs_indx_title_left_wrapper">
+                            <h2>Blog</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
-                    <div class="hs_indx_title_right_wrapper">
-                        <ul>
-                            <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
-                            <li>Blog</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-        <!-- hs service wrapper Start -->
-       <div class="hs_blog_categories_main_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                    <div class="hs_blog_left_sidebar_main_wrapper">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="hs_rs_comment_main_wrapper">
-                                    <div class="hs_rs_comment_img_wrapper">
-                                        <img src="images/content/kundali/comm_img1.jpg" alt="comment_img">
-                                    </div>
-                                    <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                        <h2><a href="view-blog.php">Joahn Doe </a><span>Jan 2 , 2018 - Friday</span> <a href="#"> </a></h2>
-                                        <p>The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                            Devgan !</p>
-                                    </div>
-                                </div>
-                                    
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="hs_rs_comment_main_wrapper">
-                                    <div class="hs_rs_comment_img_wrapper">
-                                        <img src="images/content/kundali/comm_img2.jpg" alt="comment_img">
-                                    </div>
-                                    <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                        <h2>Joahn Doe <span>Jan 2 , 2018 - Friday</span> <a href="#"> </a></h2>
-                                        <p>The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                            Devgan !</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="hs_rs_comment_main_wrapper">
-                                    <div class="hs_rs_comment_img_wrapper">
-                                        <img src="images/content/kundali/comm_img3.jpg" alt="comment_img">
-                                    </div>
-                                    <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                        <h2>Joahn Doe <span>Jan 2 , 2018 - Friday</span> <a href="#"> </a></h2>
-                                        <p>The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                            Devgan !</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="hs_rs_comment_main_wrapper">
-                                    <div class="hs_rs_comment_img_wrapper">
-                                        <img src="images/content/kundali/comm_img1.jpg" alt="comment_img">
-                                    </div>
-                                    <div class="hs_rs_comment_img_cont_wrapper hs_rs_blog_single_comment_img_cont_wrapper">
-                                        <h2>Joahn Doe <span>Jan 2 , 2018 - Friday</span> <a href="#"> </a></h2>
-                                        <p>The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly, live-wire actress, is none other than our dashing Ajay Devgan, originally named Vishal
-                                            Devgan !</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                        <div class="hs_indx_title_right_wrapper">
+                            <ul>
+                                <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                                <li>Blog</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-        
+        <!-- hs service wrapper Start -->
+        <div class="hs_blog_categories_main_wrapper">
+            <div class="container">
+                <div class="row">
+                    <?php
+                    if (empty($id)) {
+                        $blogs = Blog::all();
+                    } else {
+                        $blogs = Blog::getBlogPostsByCategory($id);
+                    }
+                    if (count($blogs) > 0) {
+                        foreach ($blogs as $key => $blog) {
+                            ?>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-box">
+                                <a href="view-blog.php?id=<?php echo $blog['id']; ?>">
+                                    <div class="hs_lest_news_box_wrapper">
+                                        <div class="hs_lest_news_img_wrapper">
+                                            <img src="upload/blog/thumb/<?php echo $blog['image_name']; ?>" alt="blog_img">
+                                            <div class="hs_lest_news_date_wrapper">
+                                                <ul>
+                                                    <li>25</li>
+                                                    <li>DEC</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="hs_lest_news_cont_wrapper">
+                                            <h5><?php echo $blog['title']; ?></h5>
+                                            <p><?php echo substr($blog['description'], 0, 150) . '...'; ?></p>
+                                            <h4>Read More <i class="fa fa-long-arrow-right"></i></h4>
+                                        </div>
+                                        <div class="hs_lest_news_cont_bottom">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        ?>
+                        <h6>No blog posts in the database.</h6>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+
         <!-- footer Start -->
-     <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         <!-- footer End -->
         <!--main js file start-->
         <script src="js/jquery_min.js"></script>
