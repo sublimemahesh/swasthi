@@ -15,9 +15,13 @@ include_once(dirname(__FILE__) . '/Banner.php');
 include_once(dirname(__FILE__) . '/DailyHoroscope.php');
 include_once(dirname(__FILE__) . '/DefaultData.php');
 include_once(dirname(__FILE__) . '/DailyHoroscopeDate.php');
+
 include_once(dirname(__FILE__) . '/Blog.php');
 include_once(dirname(__FILE__) . '/BlogPhoto.php');
 include_once(dirname(__FILE__) . '/BlogCategory.php');
+
+include_once(dirname(__FILE__) . '/Sign.php');
+
 
 function dd($data) {
     var_dump($data);

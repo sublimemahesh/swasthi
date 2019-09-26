@@ -77,22 +77,21 @@ include './class/include.php';
                                 </div>
                                 <div class="row">
                                     <?php
-                                    $signs = DefaultData::getSigns();
+                                    $signs = Sign::all();
                                     $daily_details = DailyHoroscope::getHoroscopeDetailsByDate();
                                     foreach ($daily_details as $key => $details) {
                                         foreach ($signs as $key => $sign) {
-                                            if ($key == $details['sign']) {
+                                            if ($sign['id'] == $details['sign']) {
                                                 ?>
                                                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                                     <div class="hs_kd_service_main_box_wrapper">
                                                         <div class="hs_kd_service_inner_box_wrapper horoscope-box">
                                                             <div class="hs_kd_ser_img_wrapper horoscope-box">
-                                                                <img src="images/content/kundali/ser1.jpg" alt="service_img" />
+                                                                <img src="images/sign/<?php echo $sign['image_name']; ?>" alt="sign_img" />
                                                             </div>
                                                             <div class="hs_kd_ser_img_cont_wrapper">
-                                                                <h2><?php echo $sign; ?></h2>
+                                                                <h2><?php echo $sign['eng_name']; ?></h2>
                                                                 <p><?php echo $details['description']; ?></p>
-                                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                                                             </div>
                                                         </div>
                                                     </div>
