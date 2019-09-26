@@ -6,7 +6,7 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$SERVICE_PHOTO = new ServicePhoto($id);
+$BLOG = new Blog($id);
 ?> 
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $SERVICE_PHOTO = new ServicePhoto($id);
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Service-Photo</title>
+        <title>Blog Posts</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -36,7 +36,6 @@ $SERVICE_PHOTO = new ServicePhoto($id);
             <div class="container-fluid">  
                 <?php
                 $vali = new Validator();
-
                 $vali->show_message();
                 ?>
                 <!-- Vertical Layout -->
@@ -45,36 +44,69 @@ $SERVICE_PHOTO = new ServicePhoto($id);
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Edit Service Photo
+                                    Edit Blog Posts
                                 </h2>
-
+                                <ul class="header-dropdown">
+                                    <li class="">
+                                        <a href="manage-blogs.php">
+                                            <i class="material-icons">list</i> 
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal" method="post" action="post-and-get/service-photo.php" enctype="multipart/form-data"> 
-                                    <div class="col-md-12">                                       
+                                <form class="form-horizontal" method="post" action="post-and-get/blog.php" enctype="multipart/form-data"> 
+                                    <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="file" id="image" class="form-control" value="<?php echo $SERVICE_PHOTO->image_name; ?>"  name="image">
-                                                <img src="../upload/service/gallery/<?php echo $SERVICE_PHOTO->image_name; ?>" id="image" class="view-edit-img img img-responsive img-thumbnail" name="image" alt="old image">
+                                                <input type="text" id="title" class="form-control"  value="<?php echo $BLOG->title; ?>"  name="title"  required="TRUE">
+                                                <label class="form-label">Title</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" id="caption" class="form-control"  value="<?php echo $SERVICE_PHOTO->caption; ?>"  name="caption"  required="TRUE">
-                                                <label class="form-label">Caption</label>
+                                                <select class="form-control place-select1 show-tick" name="category">
+                                                    <option> --Please Select a Category-- </option>
+                                                    <?php
+                                                    foreach (BlogCategory::all() as $key => $category) {
+                                                        if ($category['id'] == $BLOG->category) {
+                                                            ?>
+                                                            <option value="<?php echo $category['id']; ?>" selected><?php echo $category['name']; ?></option>
+                                                            <?php
+                                                        } else {
+                                                            ?>
+                                                            <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
+                                                </select>
+                                                <label class="form-label">Category</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12"> 
-                                        <input type="hidden" id="oldImageName" value="<?php echo $SERVICE_PHOTO->image_name; ?>" name="oldImageName"/>
-                                        <input type="hidden" id="id" value="<?php echo $SERVICE_PHOTO->id; ?>" name="id"/>
-                                        <input type="hidden" id="authToken" value="<?php echo $_SESSION["authToken"]; ?>" name="authToken"/>
+                                    <div class="col-md-12">                                       
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="file" id="image" class="form-control" value="<?php echo $BLOG->imageName; ?>"  name="image">
+                                                <img src="../upload/blog/thumb/<?php echo $BLOG->imageName; ?>" id="image" class="img img-responsive img-thumbnail" name="image" alt="old image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="description">Description</label>
+                                        <div class="form-line">
+                                            <textarea id="description" name="description" class="form-control" rows="5"><?php echo $BLOG->description; ?></textarea> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="hidden" id="oldImageName" value="<?php echo $BLOG->imageName; ?>" name="oldImageName"/>
+                                        <input type="hidden" id="id" value="<?php echo $BLOG->id; ?>" name="id"/>
                                         <button type="submit" class="btn btn-primary m-t-15 waves-effect" name="update" value="update">Save Changes</button>
                                     </div>
                                     <div class="row clearfix">  </div>
-                                    <hr/>
                                 </form>
                             </div>
                         </div>
@@ -91,9 +123,6 @@ $SERVICE_PHOTO = new ServicePhoto($id);
         <script src="plugins/node-waves/waves.js"></script>
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
-        <script src="js/add-new-ad.js" type="text/javascript"></script>
-
-
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({

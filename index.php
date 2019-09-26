@@ -54,22 +54,22 @@ include './class/include.php';
                     if (count($services) > 0) {
                         foreach ($services as $key => $service) {
                             ?>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="hs_title_box_main_wrapper">
-                            <div class="hs_title_img_wrapper">
-                                <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
-                                <ul>
-                                    <li>Rs.<?php echo $service["price"]; ?></li>
-                                </ul>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="hs_title_box_main_wrapper">
+                                    <div class="hs_title_img_wrapper">
+                                        <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
+                                        <ul>
+                                            <li>Rs.<?php echo $service["price"]; ?></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hs_title_img_cont_wrapper">
+                                        <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
+                                        <p><?php echo substr($service["description"], 0, 50) . '...'; ?></p>
+                                        <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="hs_title_img_cont_wrapper">
-                                <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
-                                <p><?php echo substr($service["description"], 0, 50) . '...'; ?></p>
-                                <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
+                            <?php
                         }
                     } else {
                         echo "<h6>There are no any services in the database.</h6>";
@@ -671,93 +671,37 @@ include './class/include.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="hs_lest_news_box_wrapper">
-                            <div class="hs_lest_news_img_wrapper">
-                                <img src="images/content/news_img1.jpg" alt="blog_img">
-                                <div class="hs_lest_news_date_wrapper">
-                                    <ul>
-                                        <li>25</li>
-                                        <li>DEC</li>
-                                    </ul>
-                                </div>
+                    <?php
+                    $blogs = Blog::all();
+                    foreach ($blogs as $key => $blog) {
+                        if ($key < 3) {
+                            ?>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-box">
+                                <a href="view-blog.php?id=<?php echo $blog['id']; ?>">
+                                    <div class="hs_lest_news_box_wrapper">
+                                        <div class="hs_lest_news_img_wrapper">
+                                            <img src="upload/blog/thumb/<?php echo $blog['image_name']; ?>" alt="blog_img">
+                                            <div class="hs_lest_news_date_wrapper">
+                                                <ul>
+                                                    <li>25</li>
+                                                    <li>DEC</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="hs_lest_news_cont_wrapper">
+                                            <h5><?php echo $blog['title']; ?></h5>
+                                            <p><?php echo substr($blog['description'], 0, 150) . '...'; ?></p>
+                                            <h4>Read More <i class="fa fa-long-arrow-right"></i></h4>
+                                        </div>
+                                        <div class="hs_lest_news_cont_bottom">
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="hs_lest_news_cont_wrapper">
-                                <h5>Proin gravida nibh vel velit auctor aliquet.</h5>
-                                <p>Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
-                                <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
-                            </div>
-                            <div class="hs_lest_news_cont_bottom">
-                                <!--                                <div class="hs_lest_news_cont_bottom_left">
-                                                                    <p><a href="#">by - Admin</a></p>
-                                                                </div>
-                                                                <div class="hs_lest_news_cont_bottom_center">
-                                                                    <p><a href="#">1244 Likes</a></p>
-                                                                </div>
-                                                                <div class="hs_lest_news_cont_bottom_right">
-                                                                    <p><a href="#">04 Comm.</a></p>
-                                                                </div>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="hs_lest_news_box_wrapper">
-                            <div class="hs_lest_news_img_wrapper">
-                                <img src="images/content/news_img2.jpg" alt="blog_img">
-                                <div class="hs_lest_news_date_wrapper">
-                                    <ul>
-                                        <li>25</li>
-                                        <li>DEC</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="hs_lest_news_cont_wrapper">
-                                <h5>Proin gravida nibh vel velit auctor aliquet.</h5>
-                                <p>Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
-                                <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
-                            </div>
-                            <div class="hs_lest_news_cont_bottom">
-                                <!--                                <div class="hs_lest_news_cont_bottom_left">
-                                                                    <p><a href="#">by - Admin</a></p>
-                                                                </div>
-                                                                <div class="hs_lest_news_cont_bottom_center">
-                                                                    <p><a href="#">1244 Likes</a></p>
-                                                                </div>
-                                                                <div class="hs_lest_news_cont_bottom_right">
-                                                                    <p><a href="#">04 Comm.</a></p>
-                                                                </div>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="hs_lest_news_box_wrapper">
-                            <div class="hs_lest_news_img_wrapper">
-                                <img src="images/content/news_img3.jpg" alt="blog_img">
-                                <div class="hs_lest_news_date_wrapper">
-                                    <ul>
-                                        <li>25</li>
-                                        <li>DEC</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="hs_lest_news_cont_wrapper">
-                                <h5>Proin gravida nibh vel velit auctor aliquet.</h5>
-                                <p>Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
-                                <h4><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h4>
-                            </div>
-                            <div class="hs_lest_news_cont_bottom">
-                                <!--                                <div class="hs_lest_news_cont_bottom_left">
-                                                                    <p><a href="#">by - Admin</a></p>
-                                                                </div>
-                                                                <div class="hs_lest_news_cont_bottom_center">
-                                                                    <p><a href="#">1244 Likes</a></p>
-                                                                </div>
-                                                                <div class="hs_lest_news_cont_bottom_right">
-                                                                    <p><a href="#">04 Comm.</a></p>
-                                                                </div>-->
-                            </div>
-                        </div>
-                    </div>
+                            <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -799,7 +743,7 @@ include './class/include.php';
                                                                         <i class="fa fa-quote-left"></i>
                                                                     </div>
                                                                     <div class="hs_testi_quote_cont_wrapper">
-                                                                        <p><?php echo substr($comment["comment"], 0,200) . '...'; ?></p>
+                                                                        <p><?php echo substr($comment["comment"], 0, 200) . '...'; ?></p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -823,7 +767,7 @@ include './class/include.php';
                                                                         <i class="fa fa-quote-left"></i>
                                                                     </div>
                                                                     <div class="hs_testi_quote_cont_wrapper">
-                                                                        <p><?php echo substr($comment["comment"], 0,200) . '...'; ?></p>
+                                                                        <p><?php echo substr($comment["comment"], 0, 200) . '...'; ?></p>
                                                                     </div>
                                                                 </div>
                                                             </div>

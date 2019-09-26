@@ -1,20 +1,13 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
-$id = '';
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-}
-$SERVICE = new Service($id)
-?> 
+?>
 <!DOCTYPE html>
-
-
 <html> 
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Service-photo</title>
+        <title>Blog Posts</title>
         <!-- Favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -33,9 +26,10 @@ $SERVICE = new Service($id)
         ?>
 
         <section class="content">
-            <div class="container-fluid">
+            <div class="container-fluid">  
                 <?php
                 $vali = new Validator();
+
                 $vali->show_message();
                 ?>
                 <!-- Vertical Layout -->
@@ -43,68 +37,63 @@ $SERVICE = new Service($id)
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>Create Service Photos</h2>
+                                <h2>Create Blog Posts</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
-                                        <a href="manage-service.php">
+                                        <a href="manage-blogs.php">
                                             <i class="material-icons">list</i> 
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal"  method="post" action="post-and-get/service-photo.php" enctype="multipart/form-data"> 
-                                      <div class="col-md-12">                                       
+                                <form class="form-horizontal"  method="post" action="post-and-get/blog.php" enctype="multipart/form-data"> 
+                                    <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="file" id="image" class="form-control" name="image"  required="true">
+                                                <input type="text" id="title" class="form-control"  autocomplete="off" name="title" required="true">
+                                                <label class="form-label">Title</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="text" id="caption" class="form-control" autocomplete="off" name="caption" required="true">
-                                                <label class="form-label">Caption</label>
+                                                <select class="form-control place-select1 show-tick" name="category">
+                                                    <option> --Please Select a Category-- </option>
+                                                    <?php
+                                                    foreach (BlogCategory::all() as $key => $category) {
+                                                        ?>
+                                                        <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                                <label class="form-label">Category</label>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-md-12">                                       
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="file" id="image-name" class="form-control" name="image-name"  required="true">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <label for="description">Description</label>
+                                        <div class="form-line">
+                                            <textarea id="description" name="description" class="form-control" rows="5"></textarea> 
+                                        </div>
+                                    </div>
                                     <div class="col-md-12"> 
-                                          <input type="hidden" id="id" value="<?php echo $SERVICE->id; ?>" name="id"/>
                                         <input type="submit" name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
                                     </div>
                                 </form>
-                                <div class="row">
-                                </div>
+                                <div class="row clearfix">  </div>
                                 <hr/>
 
-                                <div class="row clearfix">
-                                    <?php
-                                    $SERVICE_PHOTO = ServicePhoto::getServicePhotosById($id);
-                                    if (count($SERVICE_PHOTO) > 0) {
-                                        foreach ($SERVICE_PHOTO as $key => $service_photo) {
-                                            ?>
-                                            <div class="col-md-3"  id="div<?php echo $service_photo['id']; ?>">
-                                                <div class="photo-img-container">
-                                                    <img src="../upload/service/gallery/thumb/<?php echo $service_photo['image_name']; ?>" class="img-responsive ">
-                                                </div>
-                                                <div class="img-caption">
-                                                    <p class="maxlinetitle"><?php echo $service_photo['caption']; ?></p>
-                                                    <div class="d">
-                                                        <a href="#" class="delete-service-photo" data-id="<?php echo $service_photo['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                        <a href="edit-service-photo.php?id=<?php echo $service_photo['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
-                                                        <a href="arrange-service-photos.php?id=<?php echo $id; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php
-                                        }
-                                    } else {
-                                        ?> 
-                                        <b style="padding-left: 15px;">No services in the database.</b> 
-                                    <?php } ?> 
-
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -124,14 +113,9 @@ $SERVICE = new Service($id)
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
         <script src="js/add-new-ad.js" type="text/javascript"></script>
-        <script src="tinymce/js/tinymce/tinymce.min.js"></script>
 
-        <script src="plugins/sweetalert/sweetalert.min.js"></script>
-        <script src="plugins/bootstrap-notify/bootstrap-notify.js"></script>
-        <script src="js/pages/ui/dialogs.js"></script>
-        <script src="js/demo.js"></script>
-        <script src="delete/js/service-photo.js" type="text/javascript"></script>
-        
+
+        <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
                 selector: "#description",

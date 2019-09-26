@@ -356,13 +356,58 @@
                         </li>
                     </ul>
                 </li>
-<!--                     <li>
-                    <a href="view-album-photos.php?id=1" class="menu-toggle">
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
-                        <span>Gallery</span>
+                        <span>Blog Category</span>
                     </a>
-                 
-                </li>-->
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-blog-category.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-blog-categories.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="arrange-blog-categories.php">
+                                <i class="material-icons">list</i>
+                                <span>Arrange</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Blog</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-blog.php">
+                                <i class="material-icons">add</i>
+                                <span>Add New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-blogs.php">
+                                <i class="material-icons">list</i>
+                                <span>Manage</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="arrange-blogs.php">
+                                <i class="material-icons">list</i>
+                                <span>Arrange</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 
               
                 <li>
