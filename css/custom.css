@@ -121,7 +121,13 @@
 .horoscope-section{
     margin-top: -46px;
 
+
 .blog-box a:hover h4{
     color: #fff;
+
+
+}
+img.sign-icon {
+    width: 60px;
 
 }

@@ -258,186 +258,56 @@ include './class/include.php';
                 </div>
                 <div class="hs_sign_left_wrapper">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-aries-sign"></i>
+                        <?php
+                        foreach (Sign::all() as $key => $sign) {
+                            if ($key < 6) {
+                                ?>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
+                                        <div class="hs_slider_tabs_icon_wrapper">
+                                            
+                                            <img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/>
+                                        </div>
+                                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                                            <ul>
+                                                <li><a href="daily-horoscope.php" class="hs_tabs_btn"><?php echo $sign['eng_name']; ?></a></li>
+                                                <li>31 March - 12 October</li>
+                                            </ul>
+                                        </div>
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Aries</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper2">
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-taurus-astrological-sign-symbol"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Taurus</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper3">
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-gemini-zodiac-sign-symbol"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Gemini</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper4">
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-cancer"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Cancer</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper5">
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-leo"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Leo</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper6">
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-virgo-astrological-symbol-sign"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Virgo</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <span></span>
-                            </div>
-                        </div>
+                                <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="hs_sign_right_wrapper visible-xs">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_right_tabs_border_wrapper1">
-                                <span></span>
-
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-libra"></i>
+                    <?php
+                        foreach (Sign::all() as $key => $sign) {
+                            if ($key > 6) {
+                                ?>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
+                                        <div class="hs_slider_tabs_icon_wrapper">
+                                            <img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/>
+                                        </div>
+                                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                                            <ul>
+                                                <li><a href="daily-horoscope.php" class="hs_tabs_btn"><?php echo $sign['eng_name']; ?></a></li>
+                                                <li>31 March - 12 October</li>
+                                            </ul>
+                                        </div>
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Libra</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper2">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-scorpio"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Scorpio</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper3">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-leo"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Sagittarius
-                                            </a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper4">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-capricorn"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">
-                                                Capricorn
-                                            </a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper5">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-aquarius-zodiac-sign-symbol"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">
-                                                Aquarius
-                                            </a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper6">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-gemini-zodiac-sign-symbol"></i>
-                                </div>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Pisces
-                                            </a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                <?php
+                            }
+                        }
+                        ?>
+                </div>
                 </div>
                 <div class="hs_sign_center_wrapper hidden-sm hidden-xs">
                     <div class="hs_cycle_main_wrapper">
@@ -570,90 +440,28 @@ include './class/include.php';
                 </div>
                 <div class="hs_sign_right_wrapper hidden-xs">
                     <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_right_tabs_border_wrapper1">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Libra</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
+                        <?php
+                        foreach (Sign::all() as $key => $sign) {
+                            if ($key > 6) {
+                                ?>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
+                                        <div class="hs_slider_tabs_icon_wrapper">
+                                            <img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/>
+                                        </div>
+                                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                                            <ul>
+                                                <li><a href="daily-horoscope.php" class="hs_tabs_btn"><?php echo $sign['eng_name']; ?></a></li>
+                                                <li>31 March - 12 October</li>
+                                            </ul>
+                                        </div>
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-libra"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper2">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Scorpio</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-scorpio"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper3">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Sagittarius</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-sagittarius-arrow-sign"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper4">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Capricorn</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-capricorn"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper5">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Aquarius</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-aquarius-zodiac-sign-symbol"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper6">
-                                <span></span>
-                                <div class="hs_slider_tabs_icon_cont_wrapper">
-                                    <ul>
-                                        <li><a href="#" class="hs_tabs_btn">Pisces</a></li>
-                                        <li>31 March - 12 October</li>
-                                    </ul>
-                                </div>
-                                <div class="hs_slider_tabs_icon_wrapper">
-                                    <i class="flaticon-pisces-astrological-sign"></i>
-                                </div>
-                            </div>
-                        </div>
+                                <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
