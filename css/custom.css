@@ -84,7 +84,7 @@
     color: #fff;
 }
 .send-button{
-   margin-top: -46px; 
+    margin-top: -46px; 
 }
 .hs_kd_service_heading_wrapper h4 span{
     background: #fff;
@@ -120,14 +120,13 @@
 }
 .horoscope-section{
     margin-top: -46px;
-
-
+}
 .blog-box a:hover h4{
     color: #fff;
-
-
 }
 img.sign-icon {
     width: 60px;
-
+}
+.horoscope-box.focus {
+    box-shadow: 0px 0px 9px 3px rgba(136, 136, 236, 0.44);
 }

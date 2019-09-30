@@ -32,5 +32,26 @@ class Helper {
         $diff = abs(strtotime($date2) - strtotime($date1))/86400;
         return $diff;
     }
+    
+    public function getDateBySinhala($date) {
+        $year = date('Y', strtotime($date));
+        $month = date('M', strtotime($date));
+        $day = date('d', strtotime($date));
+        $dayinword = date('D', strtotime($date));
+        
+        $DAYS = DefaultData::getDay();
+        foreach ($DAYS as $key=>$d) {
+            if($key == $dayinword) {
+                $dayinsin = $d;
+            }
+        }
+        $MONTHS = DefaultData::getMonth();
+        foreach ($MONTHS as $key=>$m) {
+            if($key == $month) {
+                $monthinsin = $m;
+            }
+        }
+        return $year . ' ' . $monthinsin . ' මස ' . $day . ' වන ' . $dayinsin;
+    }
 
 }

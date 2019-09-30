@@ -260,18 +260,22 @@ include './class/include.php';
                     <div class="row">
                         <?php
                         foreach (Sign::all() as $key => $sign) {
+                            $class = "";
+                            if($key != 0) {
+                                $class = "hs_sign_left_tabs_wrapper_2";
+                            }
                             if ($key < 6) {
                                 ?>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
+                                    <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_left_tabs_border_wrapper<?php echo $key+1; ?>">
                                         <div class="hs_slider_tabs_icon_wrapper">
                                             
-                                            <img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/>
+                                            <a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="daily-horoscope.php" class="hs_tabs_btn"><?php echo $sign['eng_name']; ?></a></li>
-                                                <li>31 March - 12 October</li>
+                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -287,17 +291,17 @@ include './class/include.php';
                     <div class="row">
                     <?php
                         foreach (Sign::all() as $key => $sign) {
-                            if ($key > 6) {
+                            if ($key > 5) {
                                 ?>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
                                         <div class="hs_slider_tabs_icon_wrapper">
-                                            <img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/>
+                                            <a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="daily-horoscope.php" class="hs_tabs_btn"><?php echo $sign['eng_name']; ?></a></li>
-                                                <li>31 March - 12 October</li>
+                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -442,17 +446,21 @@ include './class/include.php';
                     <div class="row">
                         <?php
                         foreach (Sign::all() as $key => $sign) {
-                            if ($key > 6) {
+                            $class = "";
+                            if($key != 6) {
+                                $class = "hs_sign_left_tabs_wrapper_2";
+                            }
+                            if ($key > 5) {
                                 ?>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
+                                    <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_right_tabs_border_wrapper<?php echo $key-5; ?>">
                                         <div class="hs_slider_tabs_icon_wrapper">
-                                            <img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/>
+                                            <a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="daily-horoscope.php" class="hs_tabs_btn"><?php echo $sign['eng_name']; ?></a></li>
-                                                <li>31 March - 12 October</li>
+                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>

@@ -1,5 +1,14 @@
 <?php
 include './class/include.php';
+
+$id = "";
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+date_default_timezone_set('Asia/Colombo');
+$today = date('Y-m-d');
+$result = Helper::getDateBySinhala($today);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,8 +80,8 @@ include './class/include.php';
                                 <!--<div class="row">-->
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="hs_kd_first_sec_wrapper">
-                                        <h2><?php echo date('Y'); ?> <?php echo date('F'); ?> <?php echo date('d'); ?> , <?php echo date('l'); ?> - අද දවස ඔබට කොහොමද?<h2></h2>
-                                            <h4><span></span></h4>
+                                        <h2><?php echo $result; ?> - අද දවස ඔබට කොහොමද?</h2>
+                                        <h4><span></span></h4>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -83,14 +92,14 @@ include './class/include.php';
                                         foreach ($signs as $key => $sign) {
                                             if ($sign['id'] == $details['sign']) {
                                                 ?>
-                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="div_<?php echo $key; ?>" tabindex="1">
                                                     <div class="hs_kd_service_main_box_wrapper">
                                                         <div class="hs_kd_service_inner_box_wrapper horoscope-box">
                                                             <div class="hs_kd_ser_img_wrapper horoscope-box">
                                                                 <img src="images/sign/<?php echo $sign['image_name']; ?>" alt="sign_img" />
                                                             </div>
                                                             <div class="hs_kd_ser_img_cont_wrapper">
-                                                                <h2><?php echo $sign['eng_name']; ?></h2>
+                                                                <h2><?php echo $sign['sin_name']; ?></h2>
                                                                 <p><?php echo $details['description']; ?></p>
                                                             </div>
                                                         </div>
@@ -108,7 +117,7 @@ include './class/include.php';
                 </div>
             </div>
         </div>
-
+        <input type="hidden" id="sign-id" value="<?php echo $id; ?>" >
         <!-- footer Start -->
         <?php include 'footer.php'; ?>
         <!-- footer End -->
@@ -124,6 +133,7 @@ include './class/include.php';
         <script src="js/jquery.inview.min.js"></script>
         <script src="js/jquery.magnific-popup.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/signs.js" type="text/javascript"></script>
         <!--main js file end-->
     </body>
 </html>
