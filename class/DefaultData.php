@@ -32,8 +32,32 @@ class DefaultData {
             );
     }
 
-    public function getTotalInstlToCurrentDate($date, $period, $type) {
-        $today = date('Y-m-d H:i:s');
+    public function getDay() {
+        return array(
+            "Mon" => "සඳුදා",
+            "Tue" => "අඟහරුවාදා",
+            "Wed" => "බදාදා",
+            "Thu" => "බ්‍රහස්පතින්දා",
+            "Fri" => "සිකුරාදා",
+            "Sat" => "සෙනසුරාදා",
+            "Sun" => "ඉරිදා"
+            );
+    }
+    public function getMonth() {
+        return array(
+            "Jan" => "සඳුදා",
+            "Feb" => "අඟහරුවාදා",
+            "Mar" => "බදාදා",
+            "Apr" => "බ්‍රහස්පතින්දා",
+            "May" => "සිකුරාදා",
+            "Jun" => "සෙනසුරාදා",
+            "Jul" => "සෙනසුරාදා",
+            "Aug" => "සෙනසුරාදා",
+            "Sep" => "සැප්තැම්බර්",
+            "Oct" => "සෙනසුරාදා",
+            "Nov" => "සෙනසුරාදා",
+            "Dec" => "ඉරිදා"
+            );
     }
 
 }
