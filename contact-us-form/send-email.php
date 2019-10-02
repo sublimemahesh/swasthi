@@ -3,10 +3,10 @@
 //----------------------Company Information---------------------
 
 $comany_name = "Swasthi";
-$website_name = "www.swasthi.com";
-$comConNumber = "+94 113663500";
-$comEmail = "igmpiyumini0615@gmail.com";
-$from = 'igmpiyumini0615@gmail.com';
+$website_name = "www.swasthi.lk";
+$comConNumber = "+94 77 789 7990";
+$comEmail = "info@suharshana.com";
+$from = 'info@suharshana.com';
 
 
 //----------------------CAPTCHACODE---------------------

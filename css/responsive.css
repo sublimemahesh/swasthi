@@ -3,7 +3,8 @@
         padding: 25px 10px 25px 10px;
     }
     .header-margin{
-        margin-left: 197px !important;
+        margin-left: 125px !important;
+        width: 100%;
     } 
     .hs_main_menu a{
         padding: 29px 7px 26px 1px;
@@ -16,9 +17,27 @@
         height: 41px;
         margin-top: -18px;
     }
+    .hs_main_menu li::after {
+        border: 0px;
+    }
+    .hs_main_menu a {
+        padding: 29px 21px 26px 1px;
+    }
+    .hs_logo_wrapper a img {
+        width: 70%;
+    }
+    .hs_header_logo_right {
+        margin-top: 7px;
+    }
+    .hs_lest_news_cont_wrapper h4 {
+        color: #fff;
+    }
+    .hs_indx_title_left_wrapper h2 {
+        font-size: 26px;
+    }
 
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
     .header-margin{
         margin-left: 197px;
     } 
@@ -205,7 +224,7 @@
         width:50%;
     }
     .hs_sign_right_wrapper .hs_slider_tabs_icon_cont_wrapper{
-        text-align:right;
+        text-align:left;
     }
     .hs_cycle_main_wrapper {
         margin-left: 211px;
@@ -330,17 +349,11 @@
     .hs_footer_logo_wrapper img{
         margin-top: 0px;
     }
-    .hs_navigation_header_wrapper{
-        margin-left: -358px;
-    }
     .header-margin{
         margin-left: 0px;
     }
     .hs_header_add_wrapper{
         margin-left: -5px;
-    }
-    .header-margin{
-        margin-top: 49px;
     }
     .hs_header_logo_right{
         margin-left: 91px;
@@ -349,13 +362,33 @@
         margin-top: -24px;
         margin-bottom: 16px;
     }
-    .visible-xs{
-        background-color: #000;
-        margin-top: -49px;
-    }
+
     .hs_btn_wrapper li .hs_btn_hover{
         margin-bottom: 59px;
         margin-left: 94px;
+    }
+    .slider-area .carousel-inner .item .carousel-captions .content {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+    .hs_effect_btn.hs_about_btn {
+        margin: 36px 24%;
+    }
+    .hs_lest_news_cont_wrapper h4 {
+        color: #fff;
+    }
+    .cd-dropdown h2::after {
+        width: 51px;
+        left: 29px;
+    }
+    .cd-dropdown.dropdown-is-active {
+        height: 500px;
+    }
+    .hs_blog_right_cate_list_heading_wrapper {
+        margin-top: 0px;
+    }
+    .hs_testi_cont_inner_wrapper {
+        padding: 10px;
     }
 
 }
@@ -583,6 +616,11 @@
     }
     .hs_cycle_main_wrapper{
         margin-left: 25px;
+    }
+}
+@media (min-width: 992px){
+    .hs_title_img_cont_wrapper {
+        height: 208px;   
     }
 }
 @media (only-width: 414px){

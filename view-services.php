@@ -28,10 +28,10 @@ $SERVICE = new Service($id);
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -113,10 +113,10 @@ $SERVICE = new Service($id);
                                                     </a>
                                                 </div>
                                                 <div class="hs_footer_ln_cont_wrapper">
+                                                    <a href="view-services.php?id=<?php echo $service["id"]; ?>" title="<?php echo $service["title"]; ?>">
+                                                        <h4 class="service-title"><?php echo substr($service["title"],0,40) . '...'; ?></h4></a>
                                                     <a href="view-services.php?id=<?php echo $service["id"]; ?>">
-                                                        <h4 class="service-title"><?php echo $service["title"]; ?></h4></a>
-                                                    <a href="view-services.php?id=<?php echo $service["id"]; ?>">
-                                                        <h4 class="service-desc"><?php echo substr($service["short_description"], 0, 50) . '...'; ?></h4></a>
+                                                        <h4 class="service-desc"><p><?php echo substr($service["short_description"], 0, 100) . '...'; ?></p></h4></a>
                                                 </div>
                                             </div>
                                             <?php

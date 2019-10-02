@@ -32,10 +32,10 @@ $result = Helper::getDateBySinhala($today);
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -92,7 +92,7 @@ $result = Helper::getDateBySinhala($today);
                                         foreach ($signs as $key => $sign) {
                                             if ($sign['id'] == $details['sign']) {
                                                 ?>
-                                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="div_<?php echo $key; ?>" tabindex="1">
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="div_<?php echo $key; ?>" tabindex="1">
                                                     <div class="hs_kd_service_main_box_wrapper">
                                                         <div class="hs_kd_service_inner_box_wrapper horoscope-box">
                                                             <div class="hs_kd_ser_img_wrapper horoscope-box">

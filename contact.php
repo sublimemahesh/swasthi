@@ -1,3 +1,6 @@
+<?php
+include './class/include.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -20,11 +23,11 @@
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="contact-us-form/style.css" rel="stylesheet" type="text/css"/>
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -70,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="hs_contact_title_box_wrapper">
                             <div class="hs_service_icon_main_wrapper">
                                 <div class="hs_service_icon_wrapper hs_contact_indx_icon_wrapper">
@@ -78,11 +81,10 @@
                                     <div class="btc_step_overlay"></div>
                                 </div>
                             </div>
-                            <!--<p>+8100-123-13312<br>+1123-123-44565</p>-->
                             <p><br>+94 113663500</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="hs_contact_title_box_wrapper">
                             <div class="hs_service_icon_main_wrapper">
                                 <div class="hs_service_icon_wrapper hs_contact_indx_icon_wrapper">
@@ -90,11 +92,10 @@
                                     <div class="btc_step_overlay"></div>
                                 </div>
                             </div>
-                            <!--<p><a href="#">horoscope@example.com</a><br><a href="#">Live@example.com</a></p>-->
                             <p><a href="#"></a><br><a href="#">swasthi@gmail.com</a></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="hs_contact_title_box_wrapper">
                             <div class="hs_service_icon_main_wrapper">
                                 <div class="hs_service_icon_wrapper hs_contact_indx_icon_wrapper">
@@ -102,10 +103,7 @@
                                     <div class="btc_step_overlay"></div>
                                 </div>
                             </div>
-<!--                            <p>123, A Street B Block Dewas,
-                                <br>M.P. #455001</p>-->
-                            <p>No 55,Isipathanarama Rd, Navinna,
-                                <br>Maharagama</p>
+                            <p><br />No 55,Isipathanarama Rd, Navinna.</p>
                         </div>
                     </div>
                 </div>
@@ -133,28 +131,28 @@
                         </div>
                     </div>
                     <form>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="hs_kd_six_sec_input_wrapper">
                                 <label>First Name</label>
                                 <input type="text" class="form-control" id="txtFirstName" placeholder="Your First Name" name="first_name">
                                 <span id="spanFirstName"></span>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="hs_kd_six_sec_input_wrapper">
                                 <label>Last Name</label>
                                 <input type="text" class="form-control" id="txtLastName" placeholder="Your Last Name" name="last_name">
                                 <span id="spanLastName"></span>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="hs_kd_six_sec_input_wrapper">
                                 <label>Email</label>
                                 <input type="email" class="form-control" name="email" id="txtEmail" placeholder="Your Email">
                                 <span id="spanEmail"></span>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="hs_kd_six_sec_input_wrapper">
                                 <label>Phone Number</label>
                                 <input type="text" class="form-control" name="phone" id="txtContact" placeholder="Your Phone Number">
@@ -168,13 +166,13 @@
                                 <span id="spanmessage"></span>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 captcha">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 captcha">
                                 <div class="hs_kd_six_sec_input_wrapper form-group user-url">
                                     <input class="form-control" placeholder="Security Code" name="captchacode" id="captchacode" >
                                     <span id="capspan"></span>
                                 </div>
                             </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3  col-sm-6">
                                 <div class="form-group">
                                     <?php
                                     include ("./contact-us-form/captchacode-widget.php");

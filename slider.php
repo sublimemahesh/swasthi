@@ -99,7 +99,7 @@
                                             <p data-animation="animated bounceInUp">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit<br> consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio.</p>
                                             <div class="hs_effect_btn">
                                                 <ul>
-                                                    <li data-animation="animated flipInX"><a href="#" class="hs_btn_hover">Read more</a></li>
+                                                    <li data-animation="animated flipInX"><a href="about.php" class="hs_btn_hover">Read more</a></li>
                                                 </ul>
                                             </div>
                                             <div class="clear"></div>

@@ -275,7 +275,7 @@
                         <span>Home</span>
                     </a>
                 </li>
-                <li class="qqq">
+<!--                <li class="qqq">
                     <a href="create-slider.php" class="">
                         <i class="material-icons">chevron_right</i>
                         <span>Slider</span>
@@ -309,7 +309,7 @@
                         </li>
 
                     </ul>
-                </li>
+                </li>-->
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>

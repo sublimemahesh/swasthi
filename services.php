@@ -23,10 +23,10 @@ include './class/include.php';
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -73,12 +73,22 @@ include './class/include.php';
                                     <div class="hs_title_img_wrapper">
                                         <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
                                         <ul>
-                                            <li>Rs.<?php echo $service["price"]; ?></li>
+                                            <?php
+                                            if ($service["price"] != 0) {
+                                                ?>
+                                                <li>Rs.<?php echo $service["price"] . '/='; ?></li>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <li>Free</li>
+                                                <?php
+                                            }
+                                            ?>
                                         </ul>
                                     </div>
                                     <div class="hs_title_img_cont_wrapper">
                                         <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
-                                        <p><?php echo substr($service["description"], 0, 50) . '...'; ?></p>
+                                        <p><?php echo substr($service["description"], 0, 160) . '...'; ?></p>
                                         <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                                     </div>
                                 </div>

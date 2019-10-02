@@ -17,7 +17,7 @@ $visitor_message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//E
                                         <td width="40"></td>
                                         <td width="144">
                                             <a href= "' . $site_link . '" target="_blank"> '
-        . '<img src="https://drive.google.com/uc?export=view&id=1pSwuuEUO_ZwYy_p31ag9aShrNswiZEF4" border="0" alt=""/>
+        . '<img src="' . $site_link . '/contact-us-form/img/logo.jpg" width="90" border="0" alt=""/>
                                             </a>
                                         </td>
                                         <td width="393">
