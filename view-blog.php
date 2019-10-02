@@ -12,7 +12,7 @@ $BLOG = new Blog($id);
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
         <meta charset="utf-8" />
-        <title>Swasthi | View Blog</title>
+        <title>Swasthi | <?php echo $BLOG->title; ?></title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta name="description" content="Horoscope" />
         <meta name="keywords" content="Horoscope" />
@@ -29,10 +29,10 @@ $BLOG = new Blog($id);
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -50,12 +50,12 @@ $BLOG = new Blog($id);
             <div class="hs_title_img_overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-6 full_width">
                         <div class="hs_indx_title_left_wrapper">
                             <h2><?php echo $BLOG->title; ?></h2>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                    <div class="col-lg-6 col-md-6 col-sm-5 col-xs-6 full_width">
                         <div class="hs_indx_title_right_wrapper">
                             <ul>
                                 <li><a href="./">Home</a> &nbsp;&nbsp;&nbsp;> </li>
@@ -133,7 +133,7 @@ $BLOG = new Blog($id);
                                                 </div>
                                                 <div class="hs_footer_ln_cont_wrapper">
                                                     <a href="view-blog.php?id=<?php echo $blog["id"]; ?>">
-                                                        <h4 class="service-title"><?php echo $blog["title"]; ?></h4></a>
+                                                        <h4 class="service-title"><?php echo substr($blog["title"], 0, 15) . '...'; ?></h4></a>
                                                     <a href="view-blog.php?id=<?php echo $blog["id"]; ?>">
                                                         <h4 class="service-desc"><?php echo substr($blog["description"], 0, 50) . '...'; ?></h4></a>
                                                 </div>
@@ -141,7 +141,7 @@ $BLOG = new Blog($id);
                                             <?php
                                         }
                                     } else {
-                                        echo "<h6>There are no any other blog posts in the database.</h6>";
+                                        echo "<h6>No any other blog posts in the database.</h6>";
                                     }
                                     ?>
                                 </div>

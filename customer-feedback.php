@@ -23,10 +23,10 @@ include './class/include.php';
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -44,12 +44,12 @@ include './class/include.php';
             <div class="hs_title_img_overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                    <div class="col-lg-6 col-md-6 col-sm-7 col-xs-6 full_width">
                         <div class="hs_indx_title_left_wrapper">
                             <h2>Customer Feedback</h2>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                    <div class="col-lg-6 col-md-6 col-sm-5 col-xs-6 full_width">
                         <div class="hs_indx_title_right_wrapper">
                             <ul>
                                 <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
@@ -72,7 +72,7 @@ include './class/include.php';
                                 foreach ($FEEDBACKS as $key => $feedback) {
                                     ?>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                             <div class="hs_testi_cont_main_wrapper">
                                                 <div class="hs_testi_cont_inner_wrapper">
                                                     <div class="hs_testi_quote_cont_wrapper">
@@ -81,7 +81,7 @@ include './class/include.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                             <div class="hs_testi_client_main_wrapper">
                                                 <div class="hs_testi_client_cont_sec">
                                                     <h2><?php echo $feedback['name']; ?></h2>

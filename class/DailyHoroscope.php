@@ -91,6 +91,30 @@ class DailyHoroscope {
         return $array_res;
     }
 
+    public function getHoroscopeDetailsByDateAndSign($sign) {
+
+        $today = date('Y-m-d');
+        $last_date = DailyHoroscopeDate::getLastDate();
+        $diff = Helper::getDateDifference($last_date, $today);
+
+        if ($diff < 12) {
+            $date = $diff + 1;
+        } elseif ($diff == 12) {
+            $date = 1;
+            $LASTDATE = new DailyHoroscopeDate(1);
+            $LASTDATE->date = $today;
+            $LASTDATE->update();
+        }
+
+        $query = "SELECT * FROM `daily_horoscope` WHERE `date` = '" . $date . "' AND `sign` = '" . $sign . "' ORDER BY `id` ASC";
+        
+        $db = new Database();
+
+        $result = mysql_fetch_array($db->readQuery($query));
+
+        return $result;
+    }
+
     public function update() {
 
         $query = "UPDATE  `daily_horoscope` SET "

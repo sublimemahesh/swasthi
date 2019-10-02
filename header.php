@@ -1,9 +1,9 @@
 
-  <div class="hs_top_header_main_Wrapper">
-            <div class="container">
-                <div class="hs_header_logo_left hidden-xs">
-                    <div class="hs_logo_wrapper">
-                        
+<div class="hs_top_header_main_Wrapper">
+    <div class="container">
+        <div class="hs_header_logo_left hidden-xs">
+            <div class="hs_logo_wrapper">
+
                 <a href="./"><img src="images/content/top_logo.jpg" class="img-responsive" alt="logo" title="Logo"/></a>
             </div>
         </div>
@@ -14,7 +14,7 @@
                                 </div>-->
             <div class="hs_btn_wrapper">
                 <ul>
-                    <li><a href="#" class="hs_btn_hover">Appointments</a></li>
+                    <li><a href="appointments.php" class="hs_btn_hover">Appointments</a></li>
                 </ul>
             </div>
             <div class="hs_header_add_wrapper hidden-xs hidden-sm reach">
@@ -87,13 +87,13 @@
                                 <a class="menu-button" href="daily-horoscope.php">Daily Horoscope</a>
                             </div>
                         </li>
-                        <li>
+                        <li class="hidden-sm">
                             <div class="dropdown-wrapper menu-button">
                                 <a class="menu-button">Blog </a>
                                 <div class="drop-menu">
                                     <a class="menu-button" href="blog.php">All</a>
                                     <?php
-                                    $CATEGORY  = new BlogCategory(NULL);
+                                    $CATEGORY = new BlogCategory(NULL);
                                     foreach ($CATEGORY->all() as $category) {
                                         ?>
                                         <a class="menu-button" href="blog.php?id=<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a>
@@ -102,6 +102,9 @@
                                     ?>
                                 </div>
                             </div>
+                        </li>
+                        <li class="visible-sm">
+                            <a class="menu-button" href="blog.php">Blog </a>
                         </li>
                         <li>
                             <a class="menu-button" href="customer-feedback.php">Feedback </a>
@@ -116,7 +119,7 @@
                         <div class="row">
                             <div class="col-xs-6 col-sm-6">
                                 <div class="hs_logo">
-                                    <a href="index.html"><img src="images/content/mobile_logo.png" alt="Logo" title="Logo"></a>
+                                    <a href="./"><img src="images/header/responsive-logo.png" alt="Logo" title="Logo"></a>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-6">
@@ -177,207 +180,128 @@
                                         </svg>
                                     </a>
                                     <nav class="cd-dropdown">
-                                        <h2><a href="index.html">Horoscope</a></h2>
+                                        <h2><a href="./">Swasthi</a></h2>
                                         <a href="#0" class="cd-close">Close</a>
                                         <ul class="cd-dropdown-content">
                                             <li>
-                                                <form class="cd-search">
-                                                    <input type="search" placeholder="Search...">
-                                                </form>
+                                                <a href="./">Home</a>
                                             </li>
-                                            <li class="has-children">
-                                                <a href="#">Home</a>
-
-
-                                                <ul class="cd-secondary-dropdown is-hidden">
-                                                    <li class="go-back"><a href="#0">Menu</a></li>
-                                                    <li>
-                                                        <a href="index.html">Home</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-                                                    <li>
-                                                        <a href="index2.html">Home2</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-
-                                                </ul>
-                                                <!-- .cd-secondary-dropdown -->
-                                            </li>
-                                            <!-- .has-children -->
                                             <li>
-                                                <a href="index.html">About US</a>
+                                                <a href="about.php">About Us</a>
                                             </li>
-                                            <!-- .has-children -->
-
-                                            <li class="has-children">
-                                                <a href="#">Pages</a>
-
-                                                <ul class="cd-secondary-dropdown is-hidden">
-                                                    <li class="go-back"><a href="#0">Menu</a></li>
-                                                    <li>
-                                                        <a href="aries.html">Aries</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-                                                    <li>
-                                                        <a href="chinese.html">Chinese</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-                                                    <li>
-                                                        <a href="chinese_single.html">Chinese-Single</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-                                                    <li>
-                                                        <a href="crystal.html">Crystal</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-                                                    <li>
-                                                        <a href="kundli_dosh.html">Kundli-Dosh</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-                                                    <li>
-                                                        <a href="numerology.html">Numerology</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-                                                    <li>
-                                                        <a href="palm.html">Palm</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-                                                    <li>
-                                                        <a href="tarot.html">Tarot</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-                                                    <li>
-                                                        <a href="tarot_single.html">Tarot-Single</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-                                                    <li>
-                                                        <a href="vastu_shastra.html">Vastu-Shastra</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-                                                </ul>
-                                                <!-- .cd-secondary-dropdown -->
+                                            <li>
+                                                <a href="services.php">Services</a>
                                             </li>
-                                            <!-- .has-children -->
-                                            <li class="has-children">
-                                                <a href="#">Shop</a>
-
-                                                <ul class="cd-secondary-dropdown is-hidden">
-                                                    <li class="go-back"><a href="#0">Menu</a></li>
-                                                    <li>
-                                                        <a href="shop.html">Shop</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-                                                    <li>
-                                                        <a href="shop_single.html">Shop-Single</a>
-                                                    </li>
-                                                    <!-- .has-children -->
-
-
-                                                </ul>
-                                                <!-- .cd-secondary-dropdown -->
+                                            <li>
+                                                <a href="daily-horoscope.php">Daily Horoscope</a>
                                             </li>
-                                            <!-- .has-children -->
                                             <li class="has-children">
                                                 <a href="#">Blog</a>
 
+
                                                 <ul class="cd-secondary-dropdown is-hidden">
                                                     <li class="go-back"><a href="#0">Menu</a></li>
                                                     <li>
-                                                        <a href="blog_categories.html">Blog-Categories</a>
+                                                        <a href="blog.php">All</a>
                                                     </li>
                                                     <!-- .has-children -->
-
-                                                    <li>
-                                                        <a href="blog_single.html">Blog-Single</a>
-                                                    </li>
-                                                    <!-- .has-children -->
+                                                    <?php
+                                                    foreach (BlogCategory::all() as $category) {
+                                                        ?>
+                                                        <li>
+                                                            <a href="blog.php?id=<?php echo $category['id']; ?>"><?php echo $category['name']; ?></a>
+                                                        </li>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                    <!--.has-children -->
 
 
                                                 </ul>
-                                                <!-- .cd-secondary-dropdown -->
+                                                <!--.cd-secondary-dropdown -->
                                             </li>
-                                            <!-- .has-children -->
+                                            <!--.has-children -->
                                             <li>
-                                                <a href="contact.html">Contact</a>
+                                                <a href="customer-feedback.php">Feedback</a>
                                             </li>
-
+                                            <li>
+                                                <a href="contact.php">Contact Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="appointments.php">Appointments</a>
+                                            </li>
                                         </ul>
-                                        <!-- .cd-dropdown-content -->
+                                        <!--.cd-dropdown-content -->
 
 
 
                                     </nav>
-                                    <!-- .cd-dropdown -->
+                                    <!--.cd-dropdown -->
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- .cd-dropdown-wrapper -->
+                    <!--.cd-dropdown-wrapper -->
                 </header>
             </div>
-            <!--                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-xs">
-                                    <div class="hs_navi_searchbar_wrapper">
-                                        <input type="text" placeholder="Search here">
-                                        <button><i class="fa fa-search"></i></button>
-                                    </div>
-                                    <div class="hs_navi_cart_wrapper">
-                                        <div class="dropdown-wrapper menu-button">
-                                            <a class="menu-button" href="#"><i class="flaticon-shop"></i><span>3</span></a>
-                                            <div class="drop-menu">
-            
-                                                <div class="cc_cart_wrapper1 menu-button">
-                                                    <div class="cc_cart_img_wrapper">
-                                                        <img src="images/content/cart_img.jpg" alt="cart_img" />
-                                                    </div>
-                                                    <div class="cc_cart_cont_wrapper">
-                                                        <h4><a href="#">Gemstone</a></h4>
-                                                        <p>Quantity : 2 × $45</p>
-                                                        <h5>$90</h5>
-                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    </div>
-                                                </div>
-                                                <div class="cc_cart_wrapper1 menu-button">
-                                                    <div class="cc_cart_img_wrapper">
-                                                        <img src="images/content/cart_img.jpg" alt="cart_img" />
-                                                    </div>
-                                                    <div class="cc_cart_cont_wrapper">
-                                                        <h4><a href="#">Gemstone</a></h4>
-                                                        <p>Quantity : 2 × $45</p>
-                                                        <h5>$90</h5>
-                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    </div>
-                                                </div>
-                                                <div class="cc_cart_wrapper1 menu-button">
-                                                    <div class="cc_cart_img_wrapper">
-                                                        <img src="images/content/cart_img.jpg" alt="cart_img" />
-                                                    </div>
-                                                    <div class="cc_cart_cont_wrapper">
-                                                        <h4><a href="#">Gemstone</a></h4>
-                                                        <p>Quantity : 2 × $45</p>
-                                                        <h5>$90</h5>
-                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    </div>
-                                                </div>
-                                                <div class="cc_cart_wrapper1 menu-button">
-                                                    <div class="hs_effect_btn ceckout_btn">
-                                                        <ul>
-                                                            <li><a href="#" class="hs_btn_hover">checkout</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
+            <!--<div class = "col-lg-3 col-md-3 col-sm-3 col-xs-12 hidden-xs">
+            <div class = "hs_navi_searchbar_wrapper">
+            <input type = "text" placeholder = "Search here">
+            <button><i class = "fa fa-search"></i></button>
+            </div>
+            <div class = "hs_navi_cart_wrapper">
+            <div class = "dropdown-wrapper menu-button">
+            <a class = "menu-button" href = "#"><i class = "flaticon-shop"></i><span>3</span></a>
+            <div class = "drop-menu">
+
+            <div class = "cc_cart_wrapper1 menu-button">
+            <div class = "cc_cart_img_wrapper">
+            <img src = "images/content/cart_img.jpg" alt = "cart_img" />
+            </div>
+            <div class = "cc_cart_cont_wrapper">
+            <h4><a href = "#">Gemstone</a></h4>
+            <p>Quantity : 2 × $45</p>
+            <h5>$90</h5>
+            <button type = "button" class = "close" data-dismiss = "modal">&times;
+            </button>
+            </div>
+            </div>
+            <div class = "cc_cart_wrapper1 menu-button">
+            <div class = "cc_cart_img_wrapper">
+            <img src = "images/content/cart_img.jpg" alt = "cart_img" />
+            </div>
+            <div class = "cc_cart_cont_wrapper">
+            <h4><a href = "#">Gemstone</a></h4>
+            <p>Quantity : 2 × $45</p>
+            <h5>$90</h5>
+            <button type = "button" class = "close" data-dismiss = "modal">&times;
+            </button>
+            </div>
+            </div>
+            <div class = "cc_cart_wrapper1 menu-button">
+            <div class = "cc_cart_img_wrapper">
+            <img src = "images/content/cart_img.jpg" alt = "cart_img" />
+            </div>
+            <div class = "cc_cart_cont_wrapper">
+            <h4><a href = "#">Gemstone</a></h4>
+            <p>Quantity : 2 × $45</p>
+            <h5>$90</h5>
+            <button type = "button" class = "close" data-dismiss = "modal">&times;
+            </button>
+            </div>
+            </div>
+            <div class = "cc_cart_wrapper1 menu-button">
+            <div class = "hs_effect_btn ceckout_btn">
+            <ul>
+            <li><a href = "#" class = "hs_btn_hover">checkout</a></li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div> -->
         </div>
     </div>
 </div>

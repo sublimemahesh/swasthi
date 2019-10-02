@@ -25,10 +25,10 @@ include './class/include.php';
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -59,12 +59,23 @@ include './class/include.php';
                                     <div class="hs_title_img_wrapper">
                                         <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
                                         <ul>
-                                            <li>Rs.<?php echo $service["price"]; ?></li>
+                                            <?php
+                                            if ($service["price"] != 0) {
+                                                ?>
+                                                <li>Rs.<?php echo $service["price"] . '/='; ?></li>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <li>Free</li>
+                                                <?php
+                                            }
+                                            ?>
+
                                         </ul>
                                     </div>
                                     <div class="hs_title_img_cont_wrapper">
                                         <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
-                                        <p><?php echo substr($service["description"], 0, 50) . '...'; ?></p>
+                                        <p><?php echo substr($service["description"], 0, 160) . '...'; ?></p>
                                         <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                                     </div>
                                 </div>
@@ -102,10 +113,10 @@ include './class/include.php';
                             <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu
                                 ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
                             <h3>Contact Us</h3>
-                            <h1>+94 113663500</h1>
+                            <h1>+94 77 789 7990</h1>
                             <div class="hs_effect_btn hs_about_btn">
                                 <ul>
-                                    <li><a href="#" class="hs_btn_hover">Read more</a></li>
+                                    <li><a href="about.php" class="hs_btn_hover">Read more</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -261,21 +272,21 @@ include './class/include.php';
                         <?php
                         foreach (Sign::all() as $key => $sign) {
                             $class = "";
-                            if($key != 0) {
+                            if ($key != 0) {
                                 $class = "hs_sign_left_tabs_wrapper_2";
                             }
                             if ($key < 6) {
                                 ?>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_left_tabs_border_wrapper<?php echo $key+1; ?>">
+                                    <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_left_tabs_border_wrapper<?php echo $key + 1; ?>">
                                         <div class="hs_slider_tabs_icon_wrapper">
-                                            
-                                            <a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
+
+                                            <a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
-                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -289,19 +300,19 @@ include './class/include.php';
                 </div>
                 <div class="hs_sign_right_wrapper visible-xs">
                     <div class="row">
-                    <?php
+                        <?php
                         foreach (Sign::all() as $key => $sign) {
                             if ($key > 5) {
                                 ?>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
                                         <div class="hs_slider_tabs_icon_wrapper">
-                                            <a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
+                                            <a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
-                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -311,7 +322,7 @@ include './class/include.php';
                             }
                         }
                         ?>
-                </div>
+                    </div>
                 </div>
                 <div class="hs_sign_center_wrapper hidden-sm hidden-xs">
                     <div class="hs_cycle_main_wrapper">
@@ -447,20 +458,20 @@ include './class/include.php';
                         <?php
                         foreach (Sign::all() as $key => $sign) {
                             $class = "";
-                            if($key != 6) {
+                            if ($key != 6) {
                                 $class = "hs_sign_left_tabs_wrapper_2";
                             }
                             if ($key > 5) {
                                 ?>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_right_tabs_border_wrapper<?php echo $key-5; ?>">
+                                    <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_right_tabs_border_wrapper<?php echo $key - 5; ?>">
                                         <div class="hs_slider_tabs_icon_wrapper">
-                                            <a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
+                                            <a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
-                                                <li><a href="daily-horoscope.php?id=<?php echo $key; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -492,20 +503,24 @@ include './class/include.php';
                     foreach ($blogs as $key => $blog) {
                         if ($key < 3) {
                             ?>
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-box">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-box">
                                 <a href="view-blog.php?id=<?php echo $blog['id']; ?>">
                                     <div class="hs_lest_news_box_wrapper">
                                         <div class="hs_lest_news_img_wrapper">
                                             <img src="upload/blog/thumb/<?php echo $blog['image_name']; ?>" alt="blog_img">
                                             <div class="hs_lest_news_date_wrapper">
+                                                <?php
+                                                $day = date('d', strtotime($blog['created_at']));
+                                                $month = date('M', strtotime($blog['created_at']));
+                                                ?>
                                                 <ul>
-                                                    <li>25</li>
-                                                    <li>DEC</li>
+                                                    <li><?php echo $day; ?></li>
+                                                    <li><?php echo $month; ?></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="hs_lest_news_cont_wrapper">
-                                            <h5><?php echo $blog['title']; ?></h5>
+                                            <h5><?php echo substr($blog['title'], 0, 20) . '...'; ?></h5>
                                             <p><?php echo substr($blog['description'], 0, 150) . '...'; ?></p>
                                             <h4>Read More <i class="fa fa-long-arrow-right"></i></h4>
                                         </div>

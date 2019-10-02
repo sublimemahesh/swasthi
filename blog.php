@@ -28,10 +28,10 @@ if (isset($_GET['id'])) {
         <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
-        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     </head>
 
     <body>
@@ -78,20 +78,25 @@ if (isset($_GET['id'])) {
                     if (count($blogs) > 0) {
                         foreach ($blogs as $key => $blog) {
                             ?>
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-box">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-box">
                                 <a href="view-blog.php?id=<?php echo $blog['id']; ?>">
                                     <div class="hs_lest_news_box_wrapper">
                                         <div class="hs_lest_news_img_wrapper">
                                             <img src="upload/blog/thumb/<?php echo $blog['image_name']; ?>" alt="blog_img">
                                             <div class="hs_lest_news_date_wrapper">
+                                                <?php
+                                                $day = date('d', strtotime($blog['created_at']));
+                                                $month = date('M', strtotime($blog['created_at']));
+                                                
+                                                ?>
                                                 <ul>
-                                                    <li>25</li>
-                                                    <li>DEC</li>
+                                                    <li><?php echo $day; ?></li>
+                                                    <li><?php echo $month; ?></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="hs_lest_news_cont_wrapper">
-                                            <h5><?php echo $blog['title']; ?></h5>
+                                            <h5><?php echo substr($blog['title'], 0, 20) . '...'; ?></h5>
                                             <p><?php echo substr($blog['description'], 0, 150) . '...'; ?></p>
                                             <h4>Read More <i class="fa fa-long-arrow-right"></i></h4>
                                         </div>

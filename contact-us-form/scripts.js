@@ -86,9 +86,7 @@ function sendForm() {
 
             if (status == "incorrect") {
 
-                jQuery("#capspan").addClass("notvalidated");
-                jQuery("#capspan").html(msg);
-                jQuery("#capspan").show();
+                jQuery("#dismessage").html(msg).delay(1000).show(1000);
                 jQuery("#checking").fadeOut(2000);
 
             } else if (status == "correct") {
@@ -100,7 +98,7 @@ function sendForm() {
                 jQuery('#txtEmail').val("");
                 jQuery('#txtContact').val("");
                 jQuery('#txtSubject').val("");
-                jQuery('#txtMessage').val("");
+                jQuery('#txtmessage').val("");
                 jQuery('#captchacode').val("");
 
             }
