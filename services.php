@@ -72,22 +72,20 @@ include './class/include.php';
                                 <div class="hs_title_box_main_wrapper service-box">
                                     <div class="hs_title_img_wrapper">
                                         <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
-                                        <ul>
-                                            <?php
-                                            if ($service["price"] != 0) {
-                                                ?>
-                                                <li>Rs.<?php echo $service["price"] . '/='; ?></li>
-                                                <?php
-                                            } else {
-                                                ?>
-                                                <li>Free</li>
-                                                <?php
-                                            }
-                                            ?>
-                                        </ul>
                                     </div>
                                     <div class="hs_title_img_cont_wrapper">
-                                        <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
+                                        <h2>
+                                            <a href="view-services.php?id=<?php echo $service["id"]; ?>">
+                                                <?php
+                                                if(strlen($service["title"]) > 90) {
+                                                    echo substr($service["title"], 0, 71) . '...';
+                                                } else {
+                                                    echo $service["title"];
+                                                }
+                                                
+                                                ?>
+                                            </a>
+                                        </h2>
                                         <p><?php echo substr($service["description"], 0, 160) . '...'; ?></p>
                                         <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                                     </div>

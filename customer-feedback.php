@@ -27,6 +27,7 @@ include './class/include.php';
         <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
         <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+        <link href="guest-comments-form/style.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body>
@@ -60,14 +61,97 @@ include './class/include.php';
                 </div>
             </div>
         </div>
+        <div class="hs_contact_indx_form_main_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="hs_about_heading_main_wrapper">
+                            <div class="hs_about_heading_wrapper">
+                                <h2>Add <span>Customer Feedback</span></h2>
+                                <h4><span></span></h4>
+                                <!--<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <form id="guestcomment" name="guestcomment" method="post">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control" id="txtFullName" placeholder="Your Full Name" name="txtFullName">
+                                <span id="spanFullName"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Title</label>
+                                <input type="text" class="form-control" id="txtTitle" placeholder="Your Title" name="txtTitle">
+                                <span id="spanTitle"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Image Name</label>
+                                <input type="file" class="form-control" name="txtProfileImg" id="txtProfileImg" placeholder="Your Image">
+                                <span id="spanProfileImg"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Comment</label>
+                                <textarea rows="6" class="form-control" name="txtComment" id="txtComment" placeholder="Your Comment"></textarea>
+                                <span id="spanComment"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 captcha">
+                            <div class="hs_kd_six_sec_input_wrapper form-group user-url">
+                                <input class="form-control" placeholder="Security Code" name="captchacode" id="captchacode" >
+                                <span id="capspan"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3  col-sm-6">
+                            <div class="form-group">
+                                <?php
+                                include ("./guest-comments-form/captchacode-widget.php");
+                                ?>
+                                <img id="checking" src="guest-comments-form/img/checking.gif" alt=""/>
+                            </div>
+                        </div>
+                        <!--<button id="btnSubmit" class="hs_btn_hover submit Form btn-contact send-button">Send a Message</button>-->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="response"></div>
+
+                            <div class="hs_contact_indx_form_btn">
+                                <ul>
+                                    <li>
+                                        <input type="hidden" name="btn-comment" value="contact">
+                                        <button type="button" id="btnSubmit" class="hs_btn_hover submit Form btn-contact send-button">Send a Message</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12 contact-us-button">
+                            <div id="dismessage" align="center" class="msg-success" ></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- hs service wrapper Start -->
         <div class="hs_testi_slider_main_wrapper customer-feedback">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="hs_about_heading_main_wrapper">
+                            <div class="hs_about_heading_wrapper">
+                                <h2>View <span>Customer Feedback</span></h2>
+                                <h4><span></span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="hs_testi_slider_wrapper">
                             <?php
-                            $FEEDBACKS = Comments::all();
+                            $FEEDBACKS = Comments::activeComments();
                             if (count($FEEDBACKS) > 0) {
                                 foreach ($FEEDBACKS as $key => $feedback) {
                                     ?>
@@ -123,6 +207,7 @@ include './class/include.php';
         <script src="js/jquery.inview.min.js"></script>
         <script src="js/jquery.magnific-popup.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/create-guest-comment.js" type="text/javascript"></script>
         <!--main js file end-->
     </body>
 </html>

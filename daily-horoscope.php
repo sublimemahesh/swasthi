@@ -36,6 +36,11 @@ $result = Helper::getDateBySinhala($today);
         <link rel="stylesheet" type="text/css" href="css/responsive.css" />
         <!-- favicon links -->
         <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+        <style>
+            .hs_kd_service_main_box_wrapper {
+                height: 400px;
+            }
+        </style>
     </head>
 
     <body>

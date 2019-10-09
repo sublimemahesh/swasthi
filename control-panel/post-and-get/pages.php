@@ -7,8 +7,8 @@ if (isset($_POST['create'])) {
     $PAGES = new Page(NULL);
     $VALID = new Validator();
 
-    $PAGES->title = mysql_real_escape_string($_POST['title']);
-    $PAGES->description = mysql_real_escape_string($_POST['description']);
+    $PAGES->title = $_POST['title'];
+    $PAGES->description = $_POST['description'];
 
     $dir_dest = '../../upload/page/';
 
@@ -21,8 +21,8 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_ext = 'jpg';
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = Helper::randamId();
-        $handle->image_x = 422;
-        $handle->image_y = 513;
+        $handle->image_x = 200;
+        $handle->image_y = 200;
 
         $handle->Process($dir_dest);
 
@@ -76,8 +76,8 @@ if (isset($_POST['update'])) {
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = $_POST ["oldImageName"];
-        $handle->image_x = 422;
-        $handle->image_y = 513;
+        $handle->image_x = 200;
+        $handle->image_y = 200;
 
         $handle->Process($dir_dest);
 
@@ -90,8 +90,8 @@ if (isset($_POST['update'])) {
     $PAGES = new Page($_POST['id']);
 
     $PAGES->image_name = $_POST['oldImageName'];
-    $PAGES->title = mysql_real_escape_string($_POST['title']);
-    $PAGES->description = mysql_real_escape_string($_POST['description']);
+    $PAGES->title = $_POST['title'];
+    $PAGES->description = $_POST['description'];
 
 
     $VALID = new Validator();
@@ -122,5 +122,4 @@ if (isset($_POST['update'])) {
 
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
-    dd($PAGES);
 }

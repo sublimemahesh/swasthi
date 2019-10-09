@@ -76,9 +76,9 @@ $SERVICE = new Service($id);
                                     <div class="hs_blog_box1_main_wrapper hs_blog_box2_main_wrapper">
                                         <div class="hs_blog_box1_img_wrapper">
                                             <!--<div class="owl-carousel owl-theme">-->
-                                                        <div class="item">
-                                                            <img src="upload/service/<?php echo $SERVICE->image_name; ?>">
-                                                        </div>
+                                            <div class="item">
+                                                <img src="upload/service/<?php echo $SERVICE->image_name; ?>">
+                                            </div>
                                             <!--</div>-->
                                         </div>
                                         <div class="hs_blog_box1_cont_main_wrapper">
@@ -86,6 +86,12 @@ $SERVICE = new Service($id);
                                                 <h2><?php echo $SERVICE->title; ?></h2>
                                                 <h4><span></span></h4>
                                                 <p><?php echo $SERVICE->description; ?></p>
+                                                <div class="hs_effect_btn">
+                                                    <ul>
+                                                        <li data-animation="animated flipInX"><a href="appointments.php?id=<?php echo $SERVICE->id; ?>" class="hs_btn_hover">Appointment</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="clear"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -109,12 +115,12 @@ $SERVICE = new Service($id);
                                             <div class="hs_blog_right_recnt_cont_wrapper">
                                                 <div class="hs_footer_ln_img_wrapper">
                                                     <a href="view-services.php?id=<?php echo $service["id"]; ?>">
-                                                    <img src="upload/service/thumb/<?php echo $service["image_name"]; ?>" class="pull-left img-responsive other-img" alt="ln_img" />
+                                                        <img src="upload/service/thumb/<?php echo $service["image_name"]; ?>" class="pull-left img-responsive other-img" alt="ln_img" />
                                                     </a>
                                                 </div>
                                                 <div class="hs_footer_ln_cont_wrapper">
                                                     <a href="view-services.php?id=<?php echo $service["id"]; ?>" title="<?php echo $service["title"]; ?>">
-                                                        <h4 class="service-title"><?php echo substr($service["title"],0,40) . '...'; ?></h4></a>
+                                                        <h4 class="service-title"><?php echo substr($service["title"], 0, 40) . '...'; ?></h4></a>
                                                     <a href="view-services.php?id=<?php echo $service["id"]; ?>">
                                                         <h4 class="service-desc"><p><?php echo substr($service["short_description"], 0, 100) . '...'; ?></p></h4></a>
                                                 </div>

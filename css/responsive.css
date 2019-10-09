@@ -619,9 +619,9 @@
     }
 }
 @media (min-width: 992px){
-    .hs_title_img_cont_wrapper {
+/*    .hs_title_img_cont_wrapper {
         height: 208px;   
-    }
+    }*/
 }
 @media (only-width: 414px){
     .hs_cycle_main_wrapper{

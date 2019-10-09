@@ -4,7 +4,7 @@
 
 $comany_name = "Swasthi";
 $website_name = "www.swasthi.lk";
-$comConNumber = "+94 77 789 7990";
+$comConNumber = "+94 71 291 6167";
 $comEmail = "info@suharshana.com";
 $from = 'info@suharshana.com';
 
@@ -28,6 +28,7 @@ $full_name = $_POST['full_name'];
 $visitor_email = $_POST['email'];
 $contact = $_POST['contact'];
 $date_time = $_POST['date_time'];
+$service = $_POST['service'];
 $message = $_POST['message'];
 $captchacode = $_POST['captchacode'];
 

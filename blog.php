@@ -87,7 +87,6 @@ if (isset($_GET['id'])) {
                                                 <?php
                                                 $day = date('d', strtotime($blog['created_at']));
                                                 $month = date('M', strtotime($blog['created_at']));
-                                                
                                                 ?>
                                                 <ul>
                                                     <li><?php echo $day; ?></li>
@@ -96,7 +95,15 @@ if (isset($_GET['id'])) {
                                             </div>
                                         </div>
                                         <div class="hs_lest_news_cont_wrapper">
-                                            <h5><?php echo substr($blog['title'], 0, 20) . '...'; ?></h5>
+                                            <h5>
+                                                <?php
+                                                if (strlen($blog['title']) > 60) {
+                                                    echo substr($blog['title'], 0, 60) . '...';
+                                                } else {
+                                                    echo $blog['title'];
+                                                }
+                                                ?>
+                                            </h5>
                                             <p><?php echo substr($blog['description'], 0, 150) . '...'; ?></p>
                                             <h4>Read More <i class="fa fa-long-arrow-right"></i></h4>
                                         </div>

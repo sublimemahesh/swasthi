@@ -1,5 +1,10 @@
 <?php
 include './class/include.php';
+
+$id = "";
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +77,6 @@ include './class/include.php';
                             <div class="hs_about_heading_wrapper">
                                 <h2>Fill below form to make an <span>Appointment</span></h2>
                                 <h4><span></span></h4>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
                             </div>
                         </div>
                     </div>
@@ -107,6 +111,27 @@ include './class/include.php';
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Service</label>
+                                <select class="form-control" name="service" id="txtService">
+                                    <?php
+                                    foreach (Service::all() as $service) {
+                                        if ($id == $service['id']) {
+                                            ?>
+                                            <option value="<?php echo $service['title']; ?>" selected><?php echo $service['title']; ?></option>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <option value="<?php echo $service['title']; ?>"><?php echo $service['title']; ?></option>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                                <span id="spanService"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
                                 <label>Message</label>
                                 <textarea rows="6" class="form-control" name="message" id="txtmessage" placeholder="Your Message"></textarea>
                                 <span id="spanmessage"></span>
@@ -134,7 +159,7 @@ include './class/include.php';
                                 <ul>
                                     <li>
                                         <input type="hidden" name="form_type" value="contact">
-                                        <button type="button" id="btnSubmit" class="hs_btn_hover submit Form btn-contact send-button">Send an Appointments</button>
+                                        <button type="button" id="btnSubmit" class="hs_btn_hover submit Form btn-contact send-button">Send an Appointment</button>
                                     </li>
                                 </ul>
                             </div>
@@ -146,7 +171,7 @@ include './class/include.php';
                 </div>
             </div>
         </div>
-        
+
 
         <!-- footer Start -->
         <?php include 'footer.php'; ?>

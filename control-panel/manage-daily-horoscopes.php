@@ -75,9 +75,9 @@ $DAILYHOROSCOPES = new DailyHoroscope(NULL);
                                                     <td><?php echo $details['id']; ?></td> 
                                                     <td>
                                                         <?php
-                                                        foreach (DefaultData::getSigns() as $key => $sign) {
-                                                            if ($key == $details['sign']) {
-                                                                echo $sign;
+                                                        foreach (Sign::all() as $key => $sign) {
+                                                            if ($sign['id'] == $details['sign']) {
+                                                                echo $sign['sin_name'];
                                                             }
                                                         }
                                                         ?>

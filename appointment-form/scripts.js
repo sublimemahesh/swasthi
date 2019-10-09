@@ -14,6 +14,9 @@ jQuery(document).ready(function () {
     jQuery("#txtDateAndTime").blur(function () {
         validateEmpty("txtDateAndTime", "spanDateAndTime");
     });
+    jQuery("#txtService").blur(function () {
+        validateEmpty("txtService", "spanService");
+    });
     jQuery("#captchacode").blur(function () {
         validateEmpty("captchacode", "capspan");
     });
@@ -48,6 +51,7 @@ function validate() {
             ValidateEmail("txtEmail", "spanEmail") &
             validateEmpty("txtContact", "spanContact") &
             validateEmpty("txtDateAndTime", "spanDateAndTime") &
+            validateEmpty("txtService", "spanService") &
             validateEmpty("captchacode", "capspan")
 
             )
@@ -75,6 +79,7 @@ function sendForm() {
             email: jQuery('#txtEmail').val(),
             contact: jQuery('#txtContact').val(),
             date_time: jQuery('#txtDateAndTime').val(),
+            service: jQuery('#txtService').val(),
             message: jQuery('#txtmessage').val(),
             captchacode: jQuery('#captchacode').val()
 
@@ -97,6 +102,7 @@ function sendForm() {
                 jQuery('#txtEmail').val("");
                 jQuery('#txtContact').val("");
                 jQuery('#txtDateAndTime').val("");
+                jQuery('#txtService').removeAttr('selected');
                 jQuery('#txtSubject').val("");
                 jQuery('#txtmessage').val("");
                 jQuery('#captchacode').val("");

@@ -128,6 +128,11 @@ $visitor_message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//E
                                                          Date and TIme: ' . $date_time . '
                                                     </font>
                                                 </li>
+                                                <li>
+                                                    <font style="font-family: Verdana, Geneva, sans-serif; color:#68696a; font-size:14px; " >
+                                                         Service: ' . $service . '
+                                                    </font>
+                                                </li>
                                                 
                                             </ul>
                                         </td>
@@ -296,6 +301,11 @@ $company_message = '
                                                 <li>
                                                     <font style="font-family: Verdana, Geneva, sans-serif; color:#68696a; font-size:14px; " >
                                                          Date and Time : ' . $date_time . '
+                                                    </font>
+                                                </li>
+                                                <li>
+                                                    <font style="font-family: Verdana, Geneva, sans-serif; color:#68696a; font-size:14px; " >
+                                                         Service: ' . $service . '
                                                     </font>
                                                 </li>
                                             </ul>

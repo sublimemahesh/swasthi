@@ -43,7 +43,7 @@
     margin-left: 69px;
 }*/
 .reach{
-    margin-left: 110px;
+    margin-left: 93px;
 }
 .hs_btn_wrapper li .hs_btn_hover{
     background: #fff;
@@ -151,4 +151,32 @@ img.sign-icon {
 }
 .hs_sign_left_tabs_wrapper li .hs_tabs_btn:hover {
     color: #939292;
+}
+.hs_kd_six_sec_input_wrapper select {
+    color: #fff;
+}
+.hs_kd_six_sec_input_wrapper select {
+    width: 100%;
+    height: 50px;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    padding-left: 20px;
+    padding-right: 20px;
+    background: transparent;
+}
+.company_importance {
+    width: 100px;
+}
+.hs_testi_slider_main_wrapper.customer-feedback {
+    padding-top: 0;
+}
+.hs_footer_help_wrapper ul {
+    margin-top: 31px;
+    text-align: left;
+    list-style-type: circle;
+}
+.hs_footer_logo_wrapper ul {
+    margin-top: 0px;
+}
+.hs_footer_help_wrapper ul li {
+    margin-bottom: 10px;
 }

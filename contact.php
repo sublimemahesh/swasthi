@@ -69,7 +69,6 @@ include './class/include.php';
                             <div class="hs_about_heading_wrapper">
                                 <h2>Need Help <span>Contact Us</span></h2>
                                 <h4><span></span></h4>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
                             </div>
                         </div>
                     </div>
@@ -81,7 +80,7 @@ include './class/include.php';
                                     <div class="btc_step_overlay"></div>
                                 </div>
                             </div>
-                            <p><br>+94 113663500</p>
+                            <p><br>+94 71 291 6167 <br> +94 34 227 3555</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -92,7 +91,7 @@ include './class/include.php';
                                     <div class="btc_step_overlay"></div>
                                 </div>
                             </div>
-                            <p><a href="#"></a><br><a href="#">swasthi@gmail.com</a></p>
+                            <p><a href="#"></a><br><a href="#">swasthiinfo@gmail.com <br> info@swasthi.com  </a></p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -103,7 +102,7 @@ include './class/include.php';
                                     <div class="btc_step_overlay"></div>
                                 </div>
                             </div>
-                            <p><br />No 55,Isipathanarama Rd, Navinna.</p>
+                            <p><br />Sri Vivekaramaya, Pathirajagoda,<br>Dharga Town.</p>
                         </div>
                     </div>
                 </div>
@@ -112,12 +111,12 @@ include './class/include.php';
         <!--        <div class="hs_contact_map_main_wrapper">
                 <div id="map" style="width:100%; float:left; height:600px;"></div>
             </div>-->
-        
+
         <div class="hs_contact_map_main_wrapper">
             <div id="map" style="height:600px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.32717083107!2d79.91496081477251!3d6.851329195048676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a823073c84b%3A0xf892ccb1aaa35c10!2s55%20Isipathanarama%20Rd%2C%20Maharagama%2010280!5e0!3m2!1sen!2slk!4v1568974392626!5m2!1sen!2slk" width="100%" height="600" frameborder="0" style="border:0; position: absolute;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6122589800225!2d80.01431582921694!3d6.44380621625691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8db8681d8722f8d6!2sVivekarama%20Temple!5e0!3m2!1sen!2slk!4v1570512225895!5m2!1sen!2slk" width="100%" height="600" frameborder="0" style="border:0; position: absolute;" allowfullscreen=""></iframe>
             </div>
-            </div>
+        </div>
         <div class="hs_contact_indx_form_main_wrapper">
             <div class="container">
                 <div class="row">
@@ -126,7 +125,6 @@ include './class/include.php';
                             <div class="hs_about_heading_wrapper">
                                 <h2>Fill Free <span>Enquiry Form</span></h2>
                                 <h4><span></span></h4>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
                             </div>
                         </div>
                     </div>
@@ -167,23 +165,23 @@ include './class/include.php';
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 captcha">
-                                <div class="hs_kd_six_sec_input_wrapper form-group user-url">
-                                    <input class="form-control" placeholder="Security Code" name="captchacode" id="captchacode" >
-                                    <span id="capspan"></span>
-                                </div>
+                            <div class="hs_kd_six_sec_input_wrapper form-group user-url">
+                                <input class="form-control" placeholder="Security Code" name="captchacode" id="captchacode" >
+                                <span id="capspan"></span>
                             </div>
+                        </div>
                         <div class="col-md-3  col-sm-6">
-                                <div class="form-group">
-                                    <?php
-                                    include ("./contact-us-form/captchacode-widget.php");
-                                    ?>
-                                    <img id="checking" src="contact-us-form/img/checking.gif" alt=""/>
-                                </div>
+                            <div class="form-group">
+                                <?php
+                                include ("./contact-us-form/captchacode-widget.php");
+                                ?>
+                                <img id="checking" src="contact-us-form/img/checking.gif" alt=""/>
                             </div>
+                        </div>
                         <!--<button id="btnSubmit" class="hs_btn_hover submit Form btn-contact send-button">Send a Message</button>-->
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="response"></div>
-                            
+
                             <div class="hs_contact_indx_form_btn">
                                 <ul>
                                     <li>
@@ -194,13 +192,13 @@ include './class/include.php';
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-12 contact-us-button">
-                                <div id="dismessage" align="center" class="msg-success" ></div>
-                            </div>
+                            <div id="dismessage" align="center" class="msg-success" ></div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-        
+
 
         <!-- footer Start -->
         <?php include 'footer.php'; ?>

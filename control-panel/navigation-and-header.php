@@ -288,7 +288,7 @@
                         <span>Banner</span>
                     </a>
 
-                </li>
+                </li>-->
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -309,7 +309,7 @@
                         </li>
 
                     </ul>
-                </li>-->
+                </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>

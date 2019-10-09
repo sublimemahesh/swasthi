@@ -58,23 +58,22 @@ include './class/include.php';
                                 <div class="hs_title_box_main_wrapper">
                                     <div class="hs_title_img_wrapper">
                                         <img src="upload/service/thumb2/<?php echo $service["image_name"]; ?>" alt="totle_img">
-                                        <ul>
-                                            <?php
-                                            if ($service["price"] != 0) {
-                                                ?>
-                                                <li>Rs.<?php echo $service["price"] . '/='; ?></li>
-                                                <?php
-                                            } else {
-                                                ?>
-                                                <li>Free</li>
-                                                <?php
-                                            }
-                                            ?>
 
-                                        </ul>
                                     </div>
                                     <div class="hs_title_img_cont_wrapper">
-                                        <h2><a href="view-services.php?id=<?php echo $service["id"]; ?>"><?php echo $service["title"]; ?></a></h2>
+                                        <h2>
+                                            <a href="view-services.php?id=<?php echo $service["id"]; ?>">
+                                                <?php
+                                                if (strlen($service["title"]) > 90) {
+                                                    echo substr($service["title"], 0, 71) . '...';
+                                                } else {
+                                                    echo $service["title"];
+                                                }
+                                                ?>
+
+                                            </a>
+                                        </h2>
+
                                         <p><?php echo substr($service["description"], 0, 160) . '...'; ?></p>
                                         <h5><a href="view-services.php?id=<?php echo $service["id"]; ?>">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
                                     </div>
@@ -98,7 +97,7 @@ include './class/include.php';
                             <div class="hs_about_heading_wrapper">
                                 <h2>About <span>Swasthi</span></h2>
                                 <h4><span></span></h4>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+                                <p>We are the revolution of your future... We are the style of your tomorrow...</p>
                             </div>
                         </div>
                     </div>
@@ -134,7 +133,7 @@ include './class/include.php';
                         <div class="hs_about_heading_wrapper">
                             <h2>Daily <span>Horoscope</span></h2>
                             <h4><span></span></h4>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+                            <p>We are the revolution of your future... We are the style of your tomorrow...</p>
                         </div>
                     </div>
                 </div>
@@ -281,12 +280,12 @@ include './class/include.php';
                                     <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_left_tabs_border_wrapper<?php echo $key + 1; ?>">
                                         <div class="hs_slider_tabs_icon_wrapper">
 
-                                            <a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
+                                            <a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
-                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -307,12 +306,12 @@ include './class/include.php';
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
                                         <div class="hs_slider_tabs_icon_wrapper">
-                                            <a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
+                                            <a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
-                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -466,12 +465,12 @@ include './class/include.php';
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="hs_sign_left_tabs_wrapper <?php echo $class; ?> hs_sign_right_tabs_border_wrapper<?php echo $key - 5; ?>">
                                         <div class="hs_slider_tabs_icon_wrapper">
-                                            <a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
+                                            <a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class="hs_tabs_btn"><img class="sign-icon" src="images/sign/<?php echo $sign['image_name']; ?>" alt=""/></a>
                                         </div>
                                         <div class="hs_slider_tabs_icon_cont_wrapper">
                                             <ul>
-                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
-                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key+1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class="hs_tabs_btn"><?php echo $sign['sin_name']; ?></a></li>
+                                                <li><a href="view-daily-horoscope.php?id=<?php echo $key + 1; ?>" class=""><?php echo $sign['eng_name']; ?></a></li>
                                             </ul>
                                         </div>
                                         <span></span>
@@ -494,7 +493,7 @@ include './class/include.php';
                             <div class="hs_about_heading_wrapper">
                                 <h2> <span> Blog</span></h2>
                                 <h4><span></span></h4>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+                                <p>We are the revolution of your future... We are the style of your tomorrow...</p>
                             </div>
                         </div>
                     </div>
@@ -520,7 +519,15 @@ include './class/include.php';
                                             </div>
                                         </div>
                                         <div class="hs_lest_news_cont_wrapper">
-                                            <h5><?php echo substr($blog['title'], 0, 20) . '...'; ?></h5>
+                                            <h5>
+                                                <?php
+                                                if (strlen($blog['title']) > 60) {
+                                                    echo substr($blog['title'], 0, 60) . '...';
+                                                } else {
+                                                    echo $blog['title'];
+                                                }
+                                                ?>
+                                            </h5>
                                             <p><?php echo substr($blog['description'], 0, 150) . '...'; ?></p>
                                             <h4>Read More <i class="fa fa-long-arrow-right"></i></h4>
                                         </div>
@@ -548,7 +555,7 @@ include './class/include.php';
                             <div class="hs_about_heading_wrapper">
                                 <h2>Customer <span> Feedback</span></h2>
                                 <h4><span></span></h4>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+                                <p>We are the revolution of your future... We are the style of your tomorrow...</p>
                             </div>
                         </div>
                     </div>

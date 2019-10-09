@@ -25,7 +25,7 @@
                     <!--                            <h5>Reach Us</h5>
                                                 <p>601 , Ram Nagar Dewas</p>-->
                     <h5>Reach Us</h5>
-                    <p>No 55,Isipathanarama Rd, Navinna</p>
+                    <p>Sri Vivekaramaya, Pathirajagoda, Dharga.</p>
                 </div>
             </div>
             <div class="hs_header_add_wrapper hidden-xs hidden-sm">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="hs_header_add_icon_cont">
                     <h5>Talk to Swasthi</h5>
-                    <p>+94 77 789 7990</p>
+                    <p>+94 71 291 6167</p>
                 </div>
             </div>
             <div class="modal fade" id="myModal" role="dialog">

@@ -54,9 +54,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                 <select class="form-control place-select1 show-tick" name="sign">
                                                     <option> --Please Select a Sign-- </option>
                                                     <?php
-                                                    foreach (DefaultData::getSigns() as $key => $sign) {
+                                                    foreach (Sign::all() as $key => $sign) {
                                                         ?>
-                                                        <option value="<?php echo $key; ?>"><?php echo $sign; ?></option>
+                                                        <option value="<?php echo $sign['id']; ?>"><?php echo $sign['sin_name']; ?></option>
                                                         <?php
                                                     }
                                                     ?>
