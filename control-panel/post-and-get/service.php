@@ -83,7 +83,7 @@ if (isset($_POST['create'])) {
         $VALID->addError("Your data was saved successfully", 'success');
         $_SESSION['ERRORS'] = $VALID->errors();
 
-        header("location: ../view-service-photos.php?id=" . $SERVICE->id);
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
 
         if (!isset($_SESSION)) {

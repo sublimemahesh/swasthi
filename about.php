@@ -1,5 +1,10 @@
 <?php
 include './class/include.php';
+
+$ABOUT = new Page(1);
+$VISSION = new Page(2);
+$MISSION = new Page(3);
+$VALUE = new Page(4);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ include './class/include.php';
             </div>
         </div>
         <!-- header Start -->
-      <?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
         <!-- header End -->
         <!-- hs About Title Start -->
         <div class="hs_indx_title_main_wrapper">
@@ -61,83 +66,80 @@ include './class/include.php';
                 </div>
             </div>
         </div>
-          <div class="hs_kd_special_service_main_wrapper about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="hs_kd_srrvice_main_wrapper">
-                        <div class="hs_kd_service_heading_wrapper">
-                            <h2>Swasthi <span></span></h2>
-                            <h4><span></span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="hs_kd_service_main_box_wrapper">
-                        <div class="hs_kd_service_inner_box_wrapper">
-                            <div class="hs_kd_ser_img_wrapper">
-                                <img src="images/content/kundali/ser1.jpg" alt="service_img" />
-                            </div>
-                            <div class="hs_kd_ser_img_cont_wrapper">
-                                <h2>Vision</h2>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat hte hat paer.</p>
-                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+        <div class="hs_kd_special_service_main_wrapper about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="hs_kd_srrvice_main_wrapper">
+                            <div class="hs_kd_service_heading_wrapper">
+                                <h2>Swasthi <span></span></h2>
+                                <h4><span></span></h4>
+                                <p><?php echo $ABOUT->description; ?></p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="hs_kd_service_main_box_wrapper">
-                        <div class="hs_kd_service_inner_box_wrapper">
-                            <div class="hs_kd_ser_img_wrapper">
-                                <img src="images/content/kundali/ser2.jpg" alt="service_img" />
-                            </div>
-                            <div class="hs_kd_ser_img_cont_wrapper">
-                                <h2>Mission</h2>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat hte hat paer.</p>
-                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="hs_kd_service_main_box_wrapper">
+                            <div class="hs_kd_service_inner_box_wrapper">
+                                <div class="hs_kd_ser_img_wrapper">
+                                    <img src="upload/page/<?php echo $VISSION->image_name; ?>" class="company_importance" alt="service_img" />
+                                </div>
+                                <div class="hs_kd_ser_img_cont_wrapper">
+                                    <h2>Vision</h2>
+                                    <?php echo $VISSION->description; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="hs_kd_service_main_box_wrapper">
-                        <div class="hs_kd_service_inner_box_wrapper">
-                            <div class="hs_kd_ser_img_wrapper">
-                                <img src="images/content/kundali/ser3.jpg" alt="service_img" />
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="hs_kd_service_main_box_wrapper">
+                            <div class="hs_kd_service_inner_box_wrapper">
+                                <div class="hs_kd_ser_img_wrapper">
+                                    <img src="upload/page/<?php echo $MISSION->image_name; ?>" class="company_importance" alt="service_img" />
+                                </div>
+                                <div class="hs_kd_ser_img_cont_wrapper">
+                                    <h2>Mission</h2>
+                                    <?php echo $MISSION->description; ?>
+                                </div>
                             </div>
-                            <div class="hs_kd_ser_img_cont_wrapper">
-                                <h2>Value</h2>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat hte hat paer.</p>
-                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="hs_kd_service_main_box_wrapper">
+                            <div class="hs_kd_service_inner_box_wrapper">
+                                <div class="hs_kd_ser_img_wrapper">
+                                    <img src="upload/page/<?php echo $VALUE->image_name; ?>" class="company_importance" alt="service_img" />
+                                </div>
+                                <div class="hs_kd_ser_img_cont_wrapper">
+                                    <h2>Value</h2>
+                                    <?php echo $VALUE->description; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-<!--         <div class="hs_kd_earth_main_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="hs_kd_earth_img1_wrapper">
-                        <div class="hs_kd_earth_img_overlay"></div>
-                        <h2>How is this month for you?</h2>
+        <!--         <div class="hs_kd_earth_main_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="hs_kd_earth_img1_wrapper">
+                                <div class="hs_kd_earth_img_overlay"></div>
+                                <h2>How is this month for you?</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="hs_kd_earth_img2_wrapper">
+                                <div class="hs_kd_earth_img_overlay"></div>
+                                <h2>Perform a pooja to improve your life.</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="hs_kd_earth_img2_wrapper">
-                        <div class="hs_kd_earth_img_overlay"></div>
-                        <h2>Perform a pooja to improve your life.</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
+            </div>-->
         <!-- footer Start -->
-     <?php include 'footer.php'; ?>
+        <?php include 'footer.php'; ?>
         <!-- footer End -->
         <!--main js file start-->
         <!--main js file start-->

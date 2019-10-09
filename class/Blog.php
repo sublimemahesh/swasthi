@@ -62,7 +62,7 @@ class Blog {
 
     public function all() {
 
-        $query = "SELECT * FROM `blog` ORDER BY `queue` ASC";
+        $query = "SELECT * FROM `blog` ORDER BY `created_at` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -76,7 +76,7 @@ class Blog {
 
     public function getBlogPostsByCategory($category) {
 
-        $query = "SELECT * FROM `blog` WHERE `category` = '" . $category . "' ORDER BY `queue` ASC";
+        $query = "SELECT * FROM `blog` WHERE `category` = '" . $category . "' ORDER BY `created_at` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();

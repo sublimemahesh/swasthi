@@ -4,7 +4,7 @@
 
 $comany_name = "Swasthi";
 $website_name = "www.swasthi.lk";
-$comConNumber = "+94 77 789 7990";
+$comConNumber = "+94 71 291 6167";
 $comEmail = "info@suharshana.com";
 $from = 'info@suharshana.com';
 

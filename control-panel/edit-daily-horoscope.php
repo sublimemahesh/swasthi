@@ -61,14 +61,14 @@ $DAILYHOROSCOPE = new DailyHoroscope($id);
                                                 <select class="form-control place-select1 show-tick" name="sign">
                                                     <option> --Please Select a Sign-- </option>
                                                     <?php
-                                                    foreach (DefaultData::getSigns() as $key => $sign) {
-                                                        if ($key == $DAILYHOROSCOPE->sign) {
+                                                    foreach (Sign::all() as $key => $sign) {
+                                                        if ($sign['id'] == $DAILYHOROSCOPE->sign) {
                                                             ?>
-                                                            <option value="<?php echo $key; ?>" selected><?php echo $sign; ?></option>
+                                                            <option value="<?php echo $sign['id']; ?>" selected><?php echo $sign['sin_name']; ?></option>
                                                             <?php
                                                         } else {
                                                             ?>
-                                                            <option value="<?php echo $key; ?>"><?php echo $sign; ?></option>
+                                                            <option value="<?php echo $sign['id']; ?>"><?php echo $sign['sin_name']; ?></option>
                                                             <?php
                                                         }
                                                     }

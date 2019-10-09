@@ -78,10 +78,13 @@ $BLOG = new Blog($id);
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="hs_blog_box1_main_wrapper hs_blog_box2_main_wrapper">
                                         <div class="hs_blog_box1_img_wrapper">
-                                            <div class="owl-carousel owl-theme">
-                                                <?php
-                                                $blogphotos = BlogPhoto::getBlogPhotosById($id);
-                                                if (count($blogphotos) > 0) {
+
+                                            <?php
+                                            $blogphotos = BlogPhoto::getBlogPhotosById($id);
+                                            if (count($blogphotos) > 0) {
+                                                ?>
+                                                <div class="owl-carousel owl-theme">
+                                                    <?php
                                                     foreach ($blogphotos as $photo) {
                                                         ?>
                                                         <div class="item">
@@ -89,16 +92,17 @@ $BLOG = new Blog($id);
                                                         </div>
                                                         <?php
                                                     }
-                                                } else {
                                                     ?>
-                                                    <div class="item">
-                                                        <img src="upload/blog/gallery/<?php echo $BLOG->imageName; ?>">
-                                                    </div>
-                                                    <?php
-                                                }
+                                                </div>
+                                                <?php
+                                            } else {
                                                 ?>
-
-                                            </div>
+                                                <div class="item">
+                                                    <img src="upload/blog/<?php echo $BLOG->imageName; ?>">
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                         <div class="hs_blog_box1_cont_main_wrapper">
                                             <div class="hs_blog_cont_heading_wrapper">
@@ -132,8 +136,8 @@ $BLOG = new Blog($id);
                                                     </a>
                                                 </div>
                                                 <div class="hs_footer_ln_cont_wrapper">
-                                                    <a href="view-blog.php?id=<?php echo $blog["id"]; ?>">
-                                                        <h4 class="service-title"><?php echo substr($blog["title"], 0, 15) . '...'; ?></h4></a>
+                                                    <a href="view-blog.php?id=<?php echo $blog["id"]; ?>" title="<?php echo $blog["title"]; ?>">
+                                                        <h4 class="service-title"><?php echo substr($blog["title"], 0, 25) . '...'; ?></h4></a>
                                                     <a href="view-blog.php?id=<?php echo $blog["id"]; ?>">
                                                         <h4 class="service-desc"><?php echo substr($blog["description"], 0, 50) . '...'; ?></h4></a>
                                                 </div>
