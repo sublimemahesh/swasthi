@@ -2,40 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/swasthi/about.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/daily-horoscope.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/services.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/contact-us-form/send-email.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/contact-us-form/scripts.js</file>
-            <file>file:/C:/xampp/htdocs/swasthi/control-panel/navigation-and-header.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/customer-feedback.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/guest-comments-form/captchacode-widget.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/css/responsive.css</file>
-            <file>file:/C:/xampp/htdocs/swasthi/control-panel/post-and-get/comment.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/appointment-form/scripts.js</file>
-            <file>file:/C:/xampp/htdocs/swasthi/contact-us-form/style.css</file>
-            <file>file:/C:/xampp/htdocs/swasthi/ajax/create-guest-comment.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/control-panel/manage-pages.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/index.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/control-panel/post-and-get/pages.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/class/Blog.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/control-panel/post-and-get/service.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/footer.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/contact.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/class/Comments.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/guest-comments-form/Generate_Captcha_Code.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/header.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/appointment-form/mail-template.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/appointment-form/send-email.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/blog.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/css/custom.css</file>
-            <file>file:/C:/xampp/htdocs/swasthi/slider.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/view-services.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/guest-comments-form/style.css</file>
-            <file>file:/C:/xampp/htdocs/swasthi/js/create-guest-comment.js</file>
-            <file>file:/C:/xampp/htdocs/swasthi/appointments.php</file>
-            <file>file:/C:/xampp/htdocs/swasthi/css/flaticon.css</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

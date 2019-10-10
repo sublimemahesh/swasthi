@@ -1,5 +1,6 @@
 <?php
 include './class/include.php';
+$ABOUT = new Page(5);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +96,7 @@ include './class/include.php';
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="hs_about_heading_main_wrapper">
                             <div class="hs_about_heading_wrapper">
-                                <h2>About <span>Swasthi</span></h2>
+                                <h2>About The<span> Monk</span></h2>
                                 <h4><span></span></h4>
                                 <p>We are the revolution of your future... We are the style of your tomorrow...</p>
                             </div>
@@ -103,19 +104,18 @@ include './class/include.php';
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="hs_about_left_img_wrapper">
-                            <img src="images/content/about_img.jpg" alt="about_img" />
+                            <img src="upload/page/<?php echo $ABOUT->image_name; ?>" alt="about_img" />
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="hs_about_right_cont_wrapper">
-                            <h2>HoroScope Revels The Will Of God</h2>
-                            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu
-                                ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
-                            <h3>Contact Us</h3>
-                            <h1>+94 77 789 7990</h1>
+                            <h2><?php echo $ABOUT->title; ?></h2>
+                            <?php echo $ABOUT->description; ?>
+                            <h3>අමතන්න</h3>
+                            <h1>+94 34 227 3555</h1>
                             <div class="hs_effect_btn hs_about_btn">
                                 <ul>
-                                    <li><a href="about.php" class="hs_btn_hover">Read more</a></li>
+                                    <li><a href="contact.php" class="hs_btn_hover">Send Email</a></li>
                                 </ul>
                             </div>
                         </div>
